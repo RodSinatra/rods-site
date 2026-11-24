@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RODS | Filmes</title>
+<meta name="description" content="Rodrigo Fernandez. Filmes, edição e conteúdo. Publicidade, documentários, festas e vídeos para redes sociais.">
+<meta property="og:title" content="RODS | Rodrigo Fernandez Audiovisual">
+<meta property="og:image" content="https://cdn.myportfolio.com/3b984019-74b9-40b8-8fed-2cb87dadd330/b03f46ef-1a27-4693-9b12-5a37af1a26a2_rwc_0x0x1916x1080x1916.jpg?h=a2cab7481f0f812bfff2d8b2f2e067d6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--acc:#ffd23f;--bg:#0b0b0c;--card:#141416;--line:#262629;--ink:#f2f0ea;--mute:#8d8d93;--lime:#c6f432}
+*{box-sizing:border-box;margin:0;min-width:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 max(4vw,18px)}
+
+/* topo */
+.nav{position:sticky;top:0;z-index:20;background:#0b0b0cdd;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff0d}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.logo{font:700 20px Inter;letter-spacing:.04em}
+.logo sup{font-size:10px;margin-left:1px}
+.menu{display:flex;gap:26px;margin-left:auto;font-size:14px;color:#c9c9cd}
+.menu a{padding:6px 0;border-bottom:1px solid transparent}
+.menu a:hover,.menu a.on{color:#fff;border-color:currentColor}
+.menu a.pr.on{color:var(--lime)}
+.burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:40px}
+@media(max-width:720px){.menu{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:#0b0b0c;border-bottom:1px solid var(--line);padding:8px 18px}.menu.open{display:flex}.menu a{padding:14px 0;border:0;border-bottom:1px solid #ffffff10}.burger{display:block}}
+
+/* hero */
+.hero{padding:clamp(64px,10vw,130px) 0 clamp(40px,6vw,70px)}
+.kicker{font-size:12px;letter-spacing:.22em;color:var(--mute);text-transform:uppercase}
+h1{font:400 clamp(48px,9vw,124px)/.95 "Instrument Serif",serif;letter-spacing:-.02em;margin:22px 0 26px;max-width:14ch}
+h1 em{color:var(--acc)}
+.lead{font-size:clamp(16px,1.6vw,19px);color:#c4c4c9;max-width:46ch}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:34px;height:52px;padding:0 26px;border-radius:999px;background:var(--ink);color:#111;font-weight:600;transition:.2s}
+.cta:hover{background:var(--acc)}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid #3a3a3f;margin-left:10px}
+.cta.ghost:hover{border-color:var(--acc);color:var(--acc);background:transparent}
+.stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:18px 0;color:var(--mute);font-size:14px;margin-top:clamp(48px,7vw,90px)}
+
+/* trabalhos */
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:30px 0 18px}
+.sec-h h2{font-size:12px;letter-spacing:.22em;font-weight:600;color:var(--mute)}
+.filters{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:6px;margin-bottom:22px}
+.filters::-webkit-scrollbar{display:none}
+.f{flex:none;height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;font-size:13.5px;color:#c9c9cd;white-space:nowrap}
+.f:hover{border-color:#44444a}
+.f.on{background:var(--ink);color:#111;border-color:var(--ink)}
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:26px 20px;padding-bottom:90px}
+.work{display:block;text-align:left;background:none;border:0;padding:0}
+.thumb{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#18181b}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .3s;filter:saturate(.9)}
+.work:hover .thumb img{transform:scale(1.04);filter:saturate(1.1)}
+.play{position:absolute;inset:auto auto 14px 14px;width:44px;height:44px;border-radius:50%;background:#000000a0;backdrop-filter:blur(6px);display:grid;place-items:center;font-size:14px;transition:.2s}
+.work:hover .play{background:var(--acc);color:#111}
+.wmeta{display:flex;justify-content:space-between;gap:12px;margin-top:12px}
+.wmeta b{font-weight:600;font-size:15px}
+.wmeta span{color:var(--mute);font-size:13px;white-space:nowrap}
+.wdesc{color:var(--mute);font-size:13.5px;margin-top:4px}
+
+/* fotos */
+.photos{columns:4 240px;column-gap:16px;padding-bottom:90px}
+.ph{break-inside:avoid;margin-bottom:16px;display:block;width:100%;border:0;padding:0;background:#18181b;border-radius:12px;overflow:hidden;position:relative;text-align:left}
+.ph img{width:100%;display:block;transition:transform .5s}
+.ph:hover img{transform:scale(1.03)}
+.ph .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,#000c);font-size:13px}
+.ph .cap b{display:block;font:400 24px "Instrument Serif",serif}
+.hint{font-size:12px;letter-spacing:.2em;color:var(--mute)}
+
+/* sobre */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,70px);align-items:center;padding:clamp(60px,9vw,120px) 0}
+.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;filter:grayscale(.2)}
+.about h2{font:400 clamp(40px,5vw,64px)/1 "Instrument Serif",serif;margin:16px 0 22px}
+.about h2 em{color:var(--acc)}
+.about p{color:#c4c4c9;font-size:17px;max-width:52ch;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:#c9c9cd}
+@media(max-width:820px){.about{grid-template-columns:1fr}.about img{max-width:360px}}
+
+/* prompts */
+.pt-hero{text-align:center;padding:60px 0 26px}
+.pt-hero h1{font:700 clamp(38px,6vw,64px)/1.05 Inter;letter-spacing:-.03em;margin:0 auto;max-width:none}
+.pt-hero p{color:var(--mute);margin-top:12px}
+.tabs{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:14px 2px;justify-content:center;flex-wrap:wrap}
+.tab{position:relative;flex:none;height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--line);background:#141417;color:#d4d4d8;font-weight:600}
+.tab.on{background:var(--lime);color:#111;border-color:var(--lime);box-shadow:0 0 24px #c6f43255}
+.tab .new{position:absolute;top:-9px;right:10px;background:var(--lime);color:#111;font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;padding:16px 0 90px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.pmedia{position:relative;aspect-ratio:3/4;background:#1c1c20;overflow:hidden}
+.pmedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#ffffffaa;font-size:13px}
+.pph b{display:block;font:700 28px Inter;color:#fff;margin-bottom:4px}
+.badge{position:absolute;top:12px;left:12px;background:var(--lime);color:#111;font:700 11px Inter;letter-spacing:.06em;padding:4px 10px;border-radius:999px;z-index:2}
+.expand{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:0;background:#00000080;color:#fff;z-index:2}
+.snip{position:absolute;left:0;right:0;bottom:0;padding:48px 14px 12px;background:linear-gradient(transparent,#000000e6);font-size:12.5px;line-height:1.45;color:#eee;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;z-index:1}
+.snip.mono{font-family:"JetBrains Mono",monospace;font-size:11.5px}
+.pbody{padding:12px 14px 14px;display:grid;gap:8px}
+.ptitle{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{height:44px;border-radius:12px;border:1px solid var(--line);background:#1a1a1e;color:#e4e4e7;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;width:100%}
+.btn:hover{background:#222227}
+.btn.lime{background:var(--lime);color:#111;border-color:var(--lime)}
+
+/* modal */
+dialog{border:0;padding:0;background:transparent;color:var(--ink);max-width:none;max-height:none;width:100vw;height:100vh}
+dialog::backdrop{background:#000000ee;backdrop-filter:blur(6px)}
+.lb{position:fixed;inset:0;display:grid;place-items:center;padding:60px 4vw}
+.lb iframe{width:min(1200px,100%);aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
+.lb img{max-width:100%;max-height:82vh;border-radius:8px}
+.lb .x,.lb .ar{position:fixed;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff30;background:#00000080;font-size:20px;z-index:3}
+.lb .x{top:16px;right:16px}
+.lb .ar.l{left:16px;top:50%}.lb .ar.r{right:16px;top:50%}
+.lb .lcap{position:fixed;bottom:18px;left:0;right:0;text-align:center;color:var(--mute);font-size:13px}
+.pd{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);width:min(980px,100%);max-height:88vh;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.pd .pmedia{aspect-ratio:auto;min-height:420px}
+.pd .side{padding:22px;display:flex;flex-direction:column;gap:14px;overflow:auto}
+.pd h3{font-size:22px}
+.pd .cat{color:var(--lime);font-size:13px;font-weight:600}
+.pd pre{background:#0d0d10;border:1px solid var(--line);border-radius:14px;padding:14px;font:12.5px/1.55 "JetBrains Mono",monospace;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;max-height:46vh}
+.pd .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pgen{display:flex;width:max-content;max-width:100%;margin:6px auto 0;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;background:#141417}
+.pgen button{height:40px;padding:0 20px;border:0;border-radius:999px;background:transparent;color:#a1a1aa;font-weight:600}
+.pgen button.on{background:#fff;color:#111}
+.ptg{display:flex;gap:4px;background:#0d0d10;border:1px solid var(--line);border-radius:12px;padding:4px}
+.ptg button{flex:1;height:36px;border:0;border-radius:9px;background:transparent;color:var(--mute);font-weight:600}
+.ptg button.on{background:#222227;color:#fff}
+@media(max-width:760px){.pd{grid-template-columns:1fr;overflow:auto}.pd .pmedia{min-height:280px}}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--lime);color:#111;font-weight:700;padding:10px 20px;border-radius:999px;opacity:0;transition:.25s;pointer-events:none;z-index:99}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+footer{border-top:1px solid var(--line);padding:40px 0 50px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer a:hover{color:var(--acc)}
+.page{display:none}.page.on{display:block}
+#p-prompts{--acc:var(--lime)}
+#p-prompts :focus-visible{outline-color:var(--lime)}
+.f.on{background:var(--acc);border-color:var(--acc)}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="#videos">RODS<sup>®</sup></a>
+  <button class="burger" id="burger" aria-label="Abrir menu">☰</button>
+  <div class="menu" id="menu">
+    <a href="#videos" data-p="videos">Vídeos</a>
+    <a href="#fotografias" data-p="fotografias">Fotografias</a>
+    <a href="#prompts" data-p="prompts" class="pr">Prompts</a>
+    <a href="#sobre" data-p="sobre">Sobre o Rods ↗</a>
+  </div>
+</div></nav>
+
+<!-- ============ VÍDEOS ============ -->
+<section class="page" id="p-videos">
+  <div class="wrap">
+    <header class="hero">
+      <div class="kicker">Rodrigo Fernandez / Audiovisual</div>
+      <h1>Histórias que merecem <em>ser vistas.</em></h1>
+      <p class="lead">Filmes, edição e conteúdo. Um olhar para cada história.</p>
+      <a class="cta wpp" target="_blank" rel="noopener">Fale no WhatsApp ↗</a>
+      <a class="cta ghost insta" target="_blank" rel="noopener">Siga no Instagram ↗</a>
+      <div class="stats"><span id="stat"></span><span>Explore. Assista. Vamos conversar.</span></div>
+    </header>
+    <div class="sec-h"><h2>TRABALHOS SELECIONADOS</h2></div>
+    <div class="filters" id="vf"></div>
+    <div class="works" id="works"></div>
+  </div>
+</section>
+
+<!-- ============ FOTOGRAFIAS ============ -->
+<section class="page" id="p-fotografias">
+  <div class="wrap">
+    <header class="hero">
+      <div class="kicker">Fotografias por Rodrigo Fernandez</div>
+      <h1>Histórias em <em>um instante.</em></h1>
+      <p class="lead">Gente, música, encontros e lugares. Um pouco do mundo pelo meu olhar.</p>
+      <a class="cta wpp" target="_blank" rel="noopener">Vamos conversar ↗</a>
+      <a class="cta ghost" href="#videos">Explorar os vídeos ↗</a>
+      <div class="stats"><span>177 fotos · 5 categorias</span><span class="hint">CLIQUE PARA AMPLIAR ↗</span></div>
+    </header>
+    <div class="filters" id="pf"></div>
+    <div class="photos" id="photos"></div>
+  </div>
+</section>
+
+<!-- ============ PROMPTS ============ -->
+<section class="page" id="p-prompts">
+  <div class="wrap">
+    <header class="pt-hero">
+      <h1>Galeria de <span style="color:var(--lime)">Prompts</span></h1>
+      <p>Inspire-se, copie e crie com um clique</p>
+    </header>
+    <div class="pgen" id="pgen"></div>
+    <div class="tabs" id="ptabs"></div>
+    <div class="pgrid" id="pgrid"></div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="page" id="p-sobre">
+  <div class="wrap about">
+    <img src="https://lh3.googleusercontent.com/d/10eWXJE5D7q2L4No8rQ7LdTH2_tw1ar9W=w900" alt="Rodrigo Fernandez" style="object-position:center 25%">
+    <div>
+      <div class="kicker">Sobre o Rods</div>
+      <h2>Rodrigo Fernandez, <em>o Rods.</em></h2>
+      <p>Editor de vídeo há mais de 15 anos, fotógrafo e criador de conteúdo em São José dos Campos, SP.</p>
+      <p>Já editei milhares de aulas de infoprodutos, VSLs, anúncios, documentários, reels e festas, pra diversos players do mercado digital. Atendo em português, espanhol e inglês.</p>
+      <div class="tags"><span>Edição</span><span>VSL e ADS</span><span>Documentários</span><span>Reels</span><span>Fotografia</span><span>Filmagem</span></div>
+      <a class="cta wpp" target="_blank" rel="noopener">Fale no WhatsApp ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>© <span id="yr"></span> RODS® · Rodrigo Fernandez</span>
+  <a class="wpp" target="_blank" rel="noopener">WhatsApp (12) 99753-8060 ↗</a>
+</div></footer>
+
+<dialog id="dlg"><div id="dlgIn"></div></dialog>
+<div class="toast" id="toast">Prompt copiado!</div>
+
+<script>
+/* =========================================================
+   CONTEÚDO DO SITE. É só mexer aqui.
+   ========================================================= */
+const WHATSAPP = "5512997538060";
+const MSG_WHATS = "Olá, Rods! Vi seu portfólio e gostaria de conversar sobre um vídeo.";
+const INSTAGRAM = "rods.raw"; /* só o @, sem o arroba */
+const LINK_FLOW = "https://labs.google/fx/tools/flow";
+
+/* VÍDEOS: categoria, título, id do YouTube, descrição (opcional) */
+const VIDEOS = [
+  {cat:"Último trabalho", t:"Expert Caique Garcia", yt:"ZK5ydVRbgwE", d:"Vídeos e conteúdos gravados e editados pro Expert Caique Garcia em 2026."},
+  {cat:"Último trabalho", t:"Expert Caique Garcia 02", yt:"dV_yreD5exM"},
+  {cat:"Último trabalho", t:"Expert Caique Garcia 03", yt:"XQku0Otv-e4"},
+  {cat:"Documentários e Vlogs", t:"Vlog Buenos Aires com Caique Garcia", yt:"JU9LfpRIGWY", d:"Bastidores e destaques do dia a dia em Buenos Aires."},
+  {cat:"Documentários e Vlogs", t:"Caravana ao Malawi", yt:"JM_3yIprts0", d:"Viagem ao campo de refugiados de Zaleka contada em quatro entrevistas."},
+  {cat:"Documentários e Vlogs", t:"Bocas Ordinárias, o último show", yt:"UcziCxcmQww", d:"Os momentos antes e durante o show de despedida da banda."},
+  {cat:"Documentários e Vlogs", t:"Documentário", yt:"L8NakzifxI0", d:"Edição completa."},
+  {cat:"Documentários e Vlogs", t:"Turnê de Carnaval 2024", yt:"1SccVZ9Kb6A", d:"Direção, filmagem e edição."},
+  {cat:"Reels e Conteúdos", t:"Reels e Conteúdos 01", yt:"t-NrXZID2LA"},
+  {cat:"Reels e Conteúdos", t:"Reels e Conteúdos 02", yt:"hPD1zB1GbdI"},
+  {cat:"VSL e ADS", t:"VSL e ADS 01", yt:"862mix7s17Q"},
+  {cat:"VSL e ADS", t:"VSL e ADS 02", yt:"6Qc5zT1ovCg"},
+  {cat:"VSL e ADS", t:"VSL e ADS 03", yt:"LGWS8dhdCbc"},
+  {cat:"VSL e ADS", t:"VSL e ADS 04", yt:"KcH1uOW0djI"},
+  {cat:"VSL e ADS", t:"VSL e ADS 05", yt:"5iqhh3agm94"},
+  {cat:"VSL e ADS", t:"VSL e ADS 06", yt:"7dZxN_pemtQ"},
+  {cat:"Publicidade", t:"Oak Berry AU 01", yt:"LpOEBuTsER8"},
+  {cat:"Publicidade", t:"Oak Berry AU 02", yt:"ajOosLLOLGc"},
+  {cat:"Publicidade", t:"Oak Berry AU 03", yt:"g1uPzHq26HI"},
+  {cat:"Publicidade", t:"Oak Berry AU 04", yt:"I3QCgLcHiNg"},
+  {cat:"Publicidade", t:"Oak Berry AU 05", yt:"jDjgdyx1Hak"},
+  {cat:"Publicidade", t:"Oak Berry AU 06", yt:"BJFGq7L7nMw"},
+  {cat:"Publicidade", t:"Oak Berry AU 07", yt:"jC0M_Ogd24A"},
+  {cat:"Festas", t:"Festas 2026", yt:"v9tjhUINrkA"}
+];
+
+/* FOTOS: ficam no teu Google Drive (pasta "Fotos Site RODS"). Cada linha: categoria, id do arquivo no Drive. */
+const DESC_FOTOS = {"Shows": "Titãs, NX Zero, Jota Quest, Fresno, Pitty e RPM, Angra", "Eventos": "Coberturas de eventos", "Corporativo": "SOS Mata Atlântica e outros", "Photoshoot": "Ensaios em estúdio e área externa", "Paisagens": "Fotos do dia a dia"};
+const FOTOS = [
+  ["Shows","1TP_xxA67R3Hcho90aXkj8n7LVM1CGmLt"],
+  ["Shows","1YtbTcUaxEzergWPc159L21Gro43Arxna"],
+  ["Shows","1taIyOfKh1tTWtVa8DL_nuzJky95VdqCs"],
+  ["Shows","1Ni3FIXeQ2GMSsvv8YJOkNFYHoA9FkOwN"],
+  ["Shows","1c-fcgUEoyayvnDWjzCTcSaC1hl4RFvJL"],
+  ["Shows","1nwq0c6jbk3LAcus350Ic6TtWsfi2-LoJ"],
+  ["Shows","1dFZwni59npy0d0y5iaRm-67MQmHbK333"],
+  ["Shows","1O6h2mXjnsd6bFu3a5zZgVkM0qzeplkno"],
+  ["Shows","1GOl7YWRrK4yK5w6vdH-HPyQWy7PUkRQx"],
+  ["Shows","1v03E39W3vze_FmkYd6NtWsNfwj7lTwJ1"],
+  ["Shows","1TaO85o9eoK2jBsSirnfftNM4G--kSpyh"],
+  ["Shows","1l0IoK4U7C7QaAGV8CMh8kjM0ecPJV07z"],
+  ["Shows","1cIgdntpCvq5Btx1zJPrG_LpJoXkOzFS0"],
+  ["Shows","1fPT5mhiIryZWlZBfPL3FBgOAZdaAc9DV"],
+  ["Shows","1s_K875boyInOE8ivJmGbrQ-aDQwUoE_e"],
+  ["Shows","1tjV6xfz0wsAfVlo4pd9Ggj263Zl9PtJJ"],
+  ["Shows","1k0Bc7ojvQgOQkHUdd09I1cA-JiXoUV2T"],
+  ["Shows","1i0hQPdwyCvnZqPwF12b2WZBcHmpIYY3A"],
+  ["Shows","1J5wkf-4IlmK_t1Btee_xD6DVo8FyZ0w2"],
+  ["Shows","1ClR4vklpQ7SUe-fQ6LNm0n9_53_4lJRn"],
+  ["Shows","1LKvsVvM6jP-VilmXSeTa8OaiiI1rhR2j"],
+  ["Shows","1fIdoSFmV6IrfbLCgn7eZAbh_u4rLYPnp"],
+  ["Shows","19XnIC3qhcXmulGu27UVDFpMVzgf2rfQa"],
+  ["Shows","112tC61HGMwaDqSM2viRyG2tBrAFtU7Mn"],
+  ["Shows","15B9hBs8Mgr7ZQ8He1G1d9Z28NInvI27s"],
+  ["Shows","1z1ySWdfZPnmLAQDCcWfU-xi0NtnX4LbJ"],
+  ["Shows","1P0Wcc32YRD_RJokU4KpRyJylxucf0qv2"],
+  ["Shows","1IGoIyERF9YNWRAM_V0um3UFdwebI2n2w"],
+  ["Shows","1aVGbhkDdody-t9kYaMmmxHrlCJ522NKW"],
+  ["Shows","1B_1jQ4ZFqZgc6pD2JprPo1Khur_onytP"],
+  ["Shows","19qpVaZnNjmuYL_fT_fY4mfl4RvU41sMR"],
+  ["Shows","1PTsjwpqNQ7FI415xsFXfMuiGq4hXra82"],
+  ["Shows","1Jr7PVYdPIfL2gNDGjykXREj3xn9FwNjA"],
+  ["Shows","1BVdJMqu7u3E5r0557B9MGRXfFrdIObR6"],
+  ["Shows","1HBJkaUL3SOakFfL3HQ5hWFmkgQjuzGPw"],
+  ["Shows","1_h0mbnzMU1Q_urR_019Iw-Wp55EktTbs"],
+  ["Shows","1WF2ncVelps6RaMEilfX2UREnAjDrATKf"],
+  ["Shows","1v-_hyxPzGPh8ewqz5yVSLqTNTt2fK9BH"],
+  ["Shows","1EqYK9fmnh9ii1wkJeRkAtLfsjvSvex9U"],
+  ["Shows","1ZvPIvs8kG2yxJX6PpBzfoxgpdt-fQWKV"],
+  ["Shows","1OaY1g0yF3AL5OQXI2F4MpjHUYvs_4VJ4"],
+  ["Shows","17j1C5Q2O-bUPOUP3DU1UoTtVry0F6Cth"],
+  ["Shows","1Vyp3sT4mzRYr_2-d2CYAwsmFgToebEbM"],
+  ["Shows","1ujt8G6CxLB480CLJjvqCkKz_rI7LtybE"],
+  ["Shows","1l65Q2iWkto3vA-m4p3ugb2_4TY4wanNE"],
+  ["Shows","1ZdZzJ6vXi7bvr4THwQLtjYZUyg9qMi42"],
+  ["Shows","15cVXvt8BT3_ADyyYOLrxVY0mMo8l88ew"],
+  ["Shows","1J6n0FFp9HEmStecX3qEBme_yEsCo-qPI"],
+  ["Eventos","1TSIAGgHo42kEmtG5CdWzhk6BswfZKm9e"],
+  ["Eventos","1fwumkouz80kWCs6zyMgwhIJV8OSZIrDA"],
+  ["Eventos","1oDCK6HqVnpT-cvbtdkndFvm813leD2sE"],
+  ["Eventos","1XUn-7cduAQz6ZA1lUDlvG_Awv3rWLhIE"],
+  ["Eventos","1Elq2WTiiVZLqmMr36oX4PuUYll6_PqTe"],
+  ["Eventos","1t9z4mfE22JJKnQgxCdG2-h5P_nRr6c9b"],
+  ["Eventos","14a_1cLAH6XsSq-jPXFjJIQH58idyQlnZ"],
+  ["Eventos","1XXsC9tHIbLkLna3FsP00RrLJmaCyTRJz"],
+  ["Eventos","1d1v2C7Kyw0JEaEJ8vauk5hn4itCiyusE"],
+  ["Eventos","10OA5kYtX-lnIjfdZzGDX-__AKFXbEBv-"],
+  ["Eventos","1GPcIAlfRpCOLOCybMo-uBHlnk6DZNrwq"],
+  ["Eventos","1FlNzhnxm-s526QsYyD_VkW5DWbBqueyN"],
+  ["Eventos","1AyxKr8rphHJl_CFMmRcR0yPw7FxeZUZZ"],
+  ["Eventos","1Du5UfA4D7PSbKsuq-ExWw6SSnmHegpZl"],
+  ["Eventos","1Rsq36j-okEMP_jkz-r3VGChP0gM9xZqf"],
+  ["Eventos","1QLR_DJuNtc4eJCjdmhBjrlH_-nv_Fbvi"],
+  ["Eventos","1DouhKSgqIV4MQSBUWdLanPmHLr559KPS"],
+  ["Eventos","19BplqwLtjfcJE9ZPRtU-Pz0NHjdYILNW"],
+  ["Eventos","1GSa9SzyXKSOvR6qcITDPYeNbgTLf9lr0"],
+  ["Eventos","1bHuvefmsQk0tijpLg3Ax96l6UT8LTt22"],
+  ["Eventos","1j2VAcXsobqkf7wCcOUFPq8e25Mn6TajT"],
+  ["Eventos","10zTj8UCkJivbjz3Xnz3SymjS9HX8smyZ"],
+  ["Eventos","19K7dhs2Oby6doUK2QI1z82XmdPkeNsfm"],
+  ["Eventos","1HQGPcKRgom_EoJoUEnTIlgSjFde2bSi2"],
+  ["Eventos","1RbDuKrkJZUyAghJaYktaak-7uTB7zbFo"],
+  ["Eventos","15SMo2Id_Wj_Y7zaOonHzzjREEFkn6F7d"],
+  ["Corporativo","11hwbFA90LrDRixVmc_2H1XaEfPda8kAx"],
+  ["Corporativo","1Db2-hgX7TF2KvruYOpqcHV6sq-FfGJim"],
+  ["Corporativo","1vVKhvjVnmnYlNeXnR3tsypMoGKMdGzPN"],
+  ["Corporativo","1TLlW1vTNzQaYPCBkWqJZGRFlg6Oairf3"],
+  ["Corporativo","1dJSie63UdA2I-IxTditHDvp_pVhRKCeG"],
+  ["Corporativo","1WKOzIUqwkjpNVSt3Wam8Nsc0-py3uFRJ"],
+  ["Corporativo","1hdcKJHIz5DAAc-Nz2TuPeJ3JSKEpy95V"],
+  ["Corporativo","1ZcG2bQgECN5AhIBqTqK10RBbrGnK4yjT"],
+  ["Corporativo","1csjisPaY37LhH-mLrhvegAMYbxgIPT-u"],
+  ["Corporativo","1GpaAg4RicKwu-xIf38ZP47V626LnUJx9"],
+  ["Corporativo","1qfNF7BN8eJ7ql1eQybLGRMcu7D_t-JTf"],
+  ["Corporativo","1KIWO51dD4i5-L8bIqfSZH9vXdW-xEgq7"],
+  ["Corporativo","1Tft1OA-NHY20gZynUQeKBj7XSawm9FZK"],
+  ["Corporativo","1jlwAwiaq0o3ZXRyU64QmWp7Hu06v0Abq"],
+  ["Corporativo","1RmAIUMXLwcUnSZ-JymfKDcZ9v-VRqGGY"],
+  ["Corporativo","1Dg37e9uoydGQ1WYXf7_anaPJmivLiEQz"],
+  ["Corporativo","1QCD6hA23TpiTAfl6wU5KImXMsIY2JFDi"],
+  ["Corporativo","1lqR-XBI71gzH_yQlsfXHm1SsJVtxQkAX"],
+  ["Corporativo","1zyEEwR_AmFJeP7dky9tdOcEE_kI1kTc_"],
+  ["Corporativo","1BOuLgZw4NVdeAl3UBycZNB3mywSSQ8i5"],
+  ["Corporativo","12OTYqr_A_97chRl6IE4CFz2dBofQE92l"],
+  ["Corporativo","1dJmd0QTtlIqCrFv0gnC73wJ4_3QWtZBq"],
+  ["Corporativo","1KQejUgsT7Sp_02_kohs3BfjIblgRD_RH"],
+  ["Corporativo","1Cd6G5reGygVbNBg6zCsPjgpAtkDOWdpE"],
+  ["Corporativo","1zWgf02XSFT4dy6wlyZXikduIcc8ZZxBy"],
+  ["Corporativo","1NYuvNHy-cpTHJHAIXf6TMgbosnre9Zzv"],
+  ["Corporativo","1uDvTE5EpysE56h-d_tCSlU3pn6Y9aElZ"],
+  ["Corporativo","1C-7w5vKf1r9YgPOhqzGa43OB9L4ljHY-"],
+  ["Corporativo","1DLBXTyPJvqB_CWMV_rZbY8YZrxjgEDno"],
+  ["Corporativo","18PL2xQJ3IlVhUCB7sNVEi8htJCTsGAMz"],
+  ["Corporativo","18cY4xmqyTtJ9s3EQkPj7kLX9Kajyv9Gv"],
+  ["Corporativo","1rwgQBZk_YN2iUZasF1djBoRQk1J323oK"],
+  ["Corporativo","1BwkR7Iz2sAXPAvLM56ZlzKlpFAc6tmya"],
+  ["Corporativo","16FMrDu802jfsWjAX5E1sR0eV20dnZvjK"],
+  ["Corporativo","1j5selm37VC6QN9TCmfsi5dsmRKXmxDJ_"],
+  ["Corporativo","1_Zj6EdNul6SA7GnAttKwKvFAzOj_awK2"],
+  ["Corporativo","1yR0Cl5-K3rAXZRvWka9iVvIBaG0Y9YVm"],
+  ["Corporativo","1DKV28LTsnvKz2Z57tVnK_pofq41_PozP"],
+  ["Corporativo","100J_fkD6BhHbtuLbl-b5_n1ctIPO75iu"],
+  ["Corporativo","1ESZVuYFvzq-_OxV2aR0A5-QbAK1FE31O"],
+  ["Corporativo","1bs5TULubgL6qaBxjcs-ITVIPiRuuFzDb"],
+  ["Corporativo","1IROgwKSHhlDkxaVlm3sEOBDBLKwsnCKE"],
+  ["Corporativo","1KliQ26sz5yb7KZkEeI-pD7xxzs9E2PWz"],
+  ["Corporativo","16vm7mwF50ltMxNBCbmC9wPv15QZRlLSc"],
+  ["Corporativo","1OIqqeDyOg_YzAaDzr5ebEhPzbiEOSNed"],
+  ["Corporativo","1y7cjGgIgeHJLyMwHCRmiHCAx_Cng9mBY"],
+  ["Photoshoot","1pQhyqx1zi0ixwItm1ea7iTEG9CYK_9oY"],
+  ["Photoshoot","1HOmBsCPATyP--KFmfFF2zG_nY2UEYQGG"],
+  ["Photoshoot","1d7m3sGNu9km8ylPVU_by0XlyA4zu2S_H"],
+  ["Photoshoot","1KQXrL88WdKV0EH6gor8fqtBxHo1Bg88e"],
+  ["Photoshoot","1BgxkoWB9q8fj4YB8tn2y9bMa74G3Y7o7"],
+  ["Photoshoot","1f7FsF6fJVS98D56fNnTisgnHNIEL69SH"],
+  ["Photoshoot","1_RJoHMMKJZxTwyffG7QJlHjEtoUk54Qg"],
+  ["Photoshoot","1yPdMvDWobVLV1bS-TDYdpWpMJAUpJIEa"],
+  ["Photoshoot","1mis3Jutm4wP5wvCBrzU-b68RiGhd9A7n"],
+  ["Photoshoot","1bAiZIQR249VoPDdrxZpEYyHADApgr6LR"],
+  ["Photoshoot","154fyNubFPS5Qli7Xy0tFAWu5J-MiEM_I"],
+  ["Photoshoot","1ZOJtPqPT7P-JIDLu6cviIIPzyfU7TBx1"],
+  ["Photoshoot","1AjuEit7gHkluJ0zlN8Kpk7OmI4KA0wvw"],
+  ["Paisagens","1Wa_l2imw6MK2plIDznxpVfDJuTpaqPIO"],
+  ["Paisagens","1FHSiPbXrbrYNydAsyKiQwbOgmW9N-53S"],
+  ["Paisagens","1MMrO3NvuC6A34RmqwuhERjXwTHBqlIyp"],
+  ["Paisagens","1VJYvB7nb_9PoU2Qfl0coglzApfL7sr7Z"],
+  ["Paisagens","1DwwrXEgVh4M7_VlG9uMvxDIsfp-TKnoX"],
+  ["Paisagens","1vNIjG9kpVdNau3ceIAX0ZLSz3K7-hcGx"],
+  ["Paisagens","1Olh67mhuLCL0e1d-2INFPmhSiFpuaK9K"],
+  ["Paisagens","1S18koshR13bNIZX_O-GSZVLr7l_kRg_l"],
+  ["Paisagens","1Gsd5fLriKJbQ_P-QQhxoc5yPv5W4idQn"],
+  ["Paisagens","1FUe_lny9YHYxz7A8OmPeHXpDDDGcPx4H"],
+  ["Paisagens","10ht5ycGSYKX5Y7fE7fAKNxdt2jCqAkFI"],
+  ["Paisagens","1AXoCPml-EZGi9wvoWWcmCJbP0XkBlgGX"],
+  ["Paisagens","1zsxkegrkt0enOt8eiySUu15xNJgwkZWl"],
+  ["Paisagens","1mx0kuY9kVQXJoeG3ksQ2S_R2anZ9lmo8"],
+  ["Paisagens","1XA08gCn3aEtVoZqpiZcxHF_LAj62ccem"],
+  ["Paisagens","1zSFqE5je8_U7axipX2w9GQQ8pmzSyaq-"],
+  ["Paisagens","1MKlnYCWLI-M856mHFicj_jrPatZB9Ljd"],
+  ["Paisagens","11j5iR9zEN9D6QS2o0GyCV6hMkANl_Tkt"],
+  ["Paisagens","1AglSr90dLZvwljuEEcOunAgJgBSTFCna"],
+  ["Paisagens","1gqpyYuyNEehVQjveeqQwq291WZaujLDq"],
+  ["Paisagens","1EUocu61A58zvyYI8VQ4ZFJjozPWupmeJ"],
+  ["Paisagens","1_KMfxubtjV_sKP8xuXYXQc06gNJw-nzi"],
+  ["Paisagens","1o84jkdngrBTUk3ha52nN1kD0rHYiehsL"],
+  ["Paisagens","1V7EREPNttl4XR0X7yVP9Ycf5gJHONy_S"],
+  ["Paisagens","1TRPkUzA64GByLXSkY7LnvLsRSOQiJ4Xi"],
+  ["Paisagens","1PfJzb9Fvhmmuvq3-DVFFWiJiaPhgaAPv"],
+  ["Paisagens","1yfd9xMQNEnBUi0Woc8mevsslUHYR4CJ1"],
+  ["Paisagens","1QO7d6lQtZxvbezAoPB2mjtUwwgHilzpq"],
+  ["Paisagens","1bHfVd6Wzi7poRBx5I8GePhNxe5zjjDAs"],
+  ["Paisagens","1eR_1xP6iAGT3FbjDnPeek6zH3sw0-AcB"],
+  ["Paisagens","1Qi5XWNfphKgDbrcMpSLgQCr_tsBh1wY7"],
+  ["Paisagens","1lxrOk8db9bWfdWbg5oRKtYTz8H2_Jg05"],
+  ["Paisagens","1Pb5hvJ8tzMKY7b1GB2oA_gouMXQS0Kl_"],
+  ["Paisagens","1h0VUMnZDpCMHjOngmU7tnFVJH4yr7Pox"],
+  ["Paisagens","1xwPvsxvFkzDeoURr4tWHUTWcvRJO3e6G"],
+  ["Paisagens","1P3X6aVmwVa1rHcBkPJGF1KDmZ-TvExY7"],
+  ["Paisagens","1nQjaNmboiJi8x7UUVCA1dimbmJdk6SHR"],
+  ["Paisagens","1cO3nq7nc_zgiPZp5X1vhreu1-9EhsLRJ"],
+  ["Paisagens","1C2iC6DDYA-wGExy0M5mBXJkqQbpHVpDv"],
+  ["Paisagens","14jboel6nPndA07Tt7iP0Ihva-S_6WoAz"],
+  ["Paisagens","1Knq4ytfy_bGrUANmdlcCRwjPoPC_cOJI"],
+  ["Paisagens","1MDc-0ePePxpSiBD0LxaL-kmASvFoQBz9"],
+  ["Paisagens","1AfbeiNf-vVYXwGLtjasjaPUmgBigXTKv"],
+  ["Paisagens","14h1h9LEQbQ8jh4vIFbRW0E0kppVa_fBY"]
+].map(([cat,id]) => ({t:cat, d:DESC_FOTOS[cat]||"", img:`https://lh3.googleusercontent.com/d/${id}=w1600`, thumb:`https://lh3.googleusercontent.com/d/${id}=w700`}));
+
+/* PROMPTS: titulo, categoria, genero ("Feminino", "Masculino" ou "Unissex"), drive (id da foto na pasta PROMPTS do Drive), prompt e json (opcional). Coloca o mais novo no topo. */
+const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
+const PROMPTS = [
+  {
+    titulo: "Carro esportivo na serra com neblina",
+    categoria: "Lifestyle",
+    genero: "Masculino",
+    drive: "15IuTeAMyOqxoDuVHNfg5oPM83T93-1TL",
+    prompt: `Use the man in the attached image and keep his face, beard and hairstyle exactly the same. He leans casually against the front of a glossy black sports sedan parked on a winding mountain road, legs crossed at the ankles, one hand holding an energy drink can, the other resting on his stomach. Wearing black wraparound sunglasses, a black motorsport hoodie, baggy washed gray jeans and white sneakers. Lush green hills and pine trees disappearing into thick fog behind him, wet asphalt with white road lines. Soft overcast daylight, cool moody tones. Full body, shot on phone at chest height, vertical 9:16, real photo, no readable brand logos.`
+  },
+  {
+    titulo: "Retrato P&B de terno, olhar intenso",
+    categoria: "Retrato",
+    genero: "Masculino",
+    drive: "1KwxTGvdqYhXPSdeNL9nV4c9r664fYztw",
+    prompt: `Use the man in the attached image and keep his face, beard and hairstyle exactly the same. Black and white cinematic portrait, chest up, facing the camera with a frowning, intense and serious expression. Wearing a dark suit, white button-down shirt and a thin black tie. Dim home office background with a bookshelf and a framed picture, out of focus. Soft directional window light from one side, deep shadows, high contrast, fine film grain. 85mm lens, f/2, vertical 9:16, unretouched.`
+  },
+  {
+    titulo: "Poltrona de couro, vista de cima",
+    categoria: "Estúdio",
+    genero: "Masculino",
+    drive: "1TTyGhhEJUlmMTFwJY_etHigWv9n5Hunc",
+    prompt: `Use the man in the attached image and keep his face, beard and hairstyle exactly the same. High-angle shot from above of the man sitting in a worn brown leather armchair in the middle of an old empty room with dark wooden floorboards, looking off to the side, pensive. Wearing a dark gray knit sweater, black trousers and black leather boots. A brass floor lamp with a warm glowing shade beside him, a small wooden side table with a closed book. Dim moody light, warm lamp glow against cool window light in the background. Cinematic, muted tones, 35mm, vertical 9:16.`
+  },
+  {
+    titulo: "Fotógrafo de terno em evento",
+    categoria: "Editorial",
+    genero: "Masculino",
+    drive: "1wRIc-IHya4toXrecOIFnlZsZ1ZTzi59v",
+    prompt: `Use the man in the attached image and keep his face, beard and hairstyle exactly the same. Medium shot of the man standing at an indoor event, holding a professional DSLR camera with both hands at waist height, calm confident half smile. Wearing a charcoal gray suit, white button-down shirt and a dark slim tie. Dark green wall behind him with two round soft lights glowing, the edge of a white roll-up banner on the right. Soft natural light, clean muted color grade, 50mm, shallow depth of field, vertical 9:16, real photo.`
+  },
+  {
+    titulo: "Editorial masculino sentado, all black",
+    categoria: "Estúdio",
+    genero: "Masculino",
+    drive: "1j61F5jsQFIf6A5ulZbTCO-3z-48g9l30",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Editorial fashion portrait of the man seated sideways on a sleek black chair, body angled away, head turned slightly down, intense introspective gaze, reserved and confident mood. Wearing a black pinstripe blazer over a matte black shirt, tailored black trousers and polished black Chelsea boots. Muted black studio backdrop with subtle dark brown architectural details. Soft diffused light, gentle highlights sculpting the face, faint soft glow along the edges of the silhouette. Natural skin tones and texture, cinematic and restrained, full body, vertical 4:5.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age",
+  "pose": "seated sideways on a sleek black chair, head slightly down, intense introspective gaze",
+  "mood": "reserved, confident, quiet strength",
+  "wardrobe": "black pinstripe blazer, matte black shirt, tailored black trousers, polished black Chelsea boots",
+  "background": "muted black studio backdrop with subtle dark brown architectural details",
+  "lighting": "soft diffused light, gentle facial highlights, faint glow along silhouette edges",
+  "style": "cinematic editorial fashion, natural skin texture, restrained",
+  "framing": "full body, vertical 4:5"
+}`
+  },
+  {
+    titulo: "Raio de luz, fundo azul",
+    categoria: "Estúdio",
+    genero: "Masculino",
+    drive: "1Ls1IMxFvG8sNfd4HzTB60JQYHIW25-Wz",
+    prompt: `Crie um retrato surreal e sombrio do meu rosto na imagem, vestindo um moletom preto oversized. Ele esta de frente, com a cabeça levemente inclinada para trás e os olhos fechados, voltados para cima. O fundo é um gradiente profundo de azul cinematográfico, evocando mistério e serenidade. Um único feixe de luz ilumina seu rosto, passando sobre os olhos, criando um contraste visual dramático. Enfatizando suas características faciais, com sombras sutis destacando os contornos do rosto. A iluminação é suave, porém de alto contraste, enfatizando a textura enquanto mantém o resto do corpo em silhueta. Composição minimalista e cinematográfica com iluminação surreal e um tom emocional calmo com alto nível de detalhes, estilo de fotografia editorial, inspirado em retratos de belas artes e fotografia ambiente.
+
+Identity: same person as the reference image, exact face and features, do not beautify, do not change age
+Negative: different face, generic model face, beautified face, CGI`
+  },
+  {
+    titulo: "Cantora em clube de jazz",
+    categoria: "Editorial",
+    genero: "Feminino",
+    drive: "12Xh3ktchel8k9IQ84I3Wi7u0Ah_YLk7P",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. She sings with deep emotion into a vintage chrome microphone on a stand in a smoky 1940s jazz club, eyes glossy with tears, brows raised. Hair in soft retro waves, dark red lips, small pearl earrings, gold chain necklace. Wearing an elegant black velvet sleeveless dress. Behind her, a double bass player and a pianist in suits, small round tables with candles, wooden balcony and heavy curtains. A warm spotlight from above cutting through haze. Cinematic, warm amber tones, film grain, 50mm, vertical 9:16.`
+  },
+  {
+    titulo: "Café na calçada",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "1RTD-UNg7eGP1J3T0jgTclsUmhLS6HC41",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. She sits at a rustic wooden table at an outdoor sidewalk café, holding a cappuccino cup with both hands near her lips, soft smile, looking at the camera. Wearing a plain white t-shirt, high-waisted jeans, a thin gold necklace. A croissant on a small plate and a phone on the table. Bistro chairs, people chatting at other tables, trees and city street softly blurred. Bright natural daylight, warm tones, 35mm, shallow depth of field, vertical 9:16, real lifestyle photo.`
+  },
+  {
+    titulo: "Unboxing de celular em casa",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "1Ul5E9u5rxJANi-Gs-09AuG1jNPnxUbRm",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. She sits at a wooden desk at home, smiling at the camera, holding a new silver smartphone up to show it, the open box, tissue paper, cable and manual on the table. Wearing a black top under a chunky gray knit cardigan, thin gold necklace and rings. Cozy bright living room behind her with a bookshelf, hanging plants, a monstera, a ceramic mug and a laptop. Soft natural window light, warm neutral tones, 35mm, vertical 9:16, real influencer photo, no readable logos.`
+  },
+  {
+    titulo: "Selfie no espelho, sala clara",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "1jo92gXwfrUg-gR1YdXA1x4LI4eUHFPU9",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Mirror selfie: she kneels on a fluffy beige shag rug, holding her phone up in front of her face, winking playfully. Wearing a white ribbed long-sleeve crop top, neon green bike shorts, white socks, gold bracelets and necklace. Bright modern apartment living room with a beige sofa, dried flowers, a kitchen island with gold bar stools and big windows with city views. Warm golden late-afternoon light, phone camera look, vertical 3:4, real photo.`
+  },
+  {
+    titulo: "Selfie pós-treino na academia",
+    categoria: "Fitness",
+    genero: "Feminino",
+    drive: "15dOKMGek3VzRHDVfZ0ZAy2oi59vOrGmH",
+    prompt: `Use the adult woman in the attached image and keep her face, hair color and skin tone exactly the same. Post-workout gym selfie taken with an iPhone front camera, arm extended, phone held slightly above eye level angled down, wide-angle phone lens, vertical 4:5. Hair in a high ponytail with a few loose strands, confident calm expression, slight glow of sweat. Wearing a charcoal gray strappy sports bra, black high-waisted leggings and a white towel over one shoulder. Gym background with dumbbell racks, benches and cable machines, slightly out of focus. Cool overhead fluorescent gym lighting. Real phone photo, natural skin texture, slight grain, not studio, not CGI.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman.",
+  "camera": "iPhone front camera selfie, arm extended, phone slightly above eye level angled down, wide-angle, vertical 4:5",
+  "hair_style": "high ponytail with loose strands, hair color from reference",
+  "expression": "confident, calm, slight glow of sweat",
+  "clothing": "charcoal gray strappy sports bra, black high-waisted leggings, white towel over one shoulder",
+  "scene": "gym with dumbbell racks, benches and cable machines, background slightly out of focus",
+  "lighting": "cool overhead fluorescent gym light",
+  "realism": "real phone photo, natural skin texture, slight grain, not studio, not CGI"
+}`
+  },
+  {
+    titulo: "Close extremo beauty skincare (pele molhada)",
+    categoria: "Beauty",
+    genero: "Feminino",
+    drive: "1VtNwb-MY6HTAaHyU7vZ1yKxC2JTCLqNj",
+    prompt: `Use the person in the attached image and keep their face, eye color and skin tone exactly the same. Extreme close-up beauty portrait, face filling the frame, slight three-quarter angle, lips gently parted. Dewy wet-look skin with visible pores and peach fuzz, hair slicked back wet, minimal makeup, glossy nude lips, large gold earrings with burgundy stones. Soft frontal beauty light, pale blue-gray background, 85mm, f/8, unretouched RAW look.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Keep her exact face shape, eye color, eyebrows, lips, skin tone and any freckles or moles exactly as in the reference. Do not add features she does not have.",
+  "shot": "ultra-realistic extreme close-up beauty portrait, vertical, face filling 85-90% of the frame, head turned slightly three-quarters, eye-level camera",
+  "expression": "relaxed confident expression, lips gently parted",
+  "skin": "true photographic microtexture, visible pores including inside highlights, fine peach fuzz, natural imperfections, very dewy hydrated skincare glow with real specular highlights. Never plastic or smoothed",
+  "eyes": "extremely sharp detail, radial iris fibers, moist waterline, individual irregular lashes, minimal mascara",
+  "lips": "natural lip color with clear high-shine gloss, visible lip lines",
+  "hair": "her own hair color, slicked straight back wet-look, visible baby hairs",
+  "makeup": "minimal editorial, subtle blush, faint mauve-pink eyeshadow, glossy nude lips",
+  "accessories": "large rectangular handcrafted gold earrings with deep burgundy stone",
+  "lighting": "large soft frontal beauty light, soft shadows, pale blue-gray studio background",
+  "camera": "full-frame, 85mm macro, f/8, ISO 100, 1/160s, deep focus on the face",
+  "style": "luxury skincare campaign, unretouched RAW photograph, subtle grain",
+  "negative": "different face, changed eye color, airbrushed skin, plastic gloss, CGI, false lashes, heavy contour"
+}`
+  },
+  {
+    titulo: "Capa de DVD na locadora anos 2000",
+    categoria: "Conceito",
+    genero: "Feminino",
+    drive: "1SUQSn-GDMC-AyAuXeU4pR-NNyT0is7r4",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Tight close-up of a DVD new releases shelf in a 2000s video rental store. A scuffed clear plastic clamshell case holds a DVD whose cover shows a moody thriller close-up of the person in a black turtleneck, serious expression. Bright reflections on the plastic, blank price sticker, warm nostalgic light, shallow depth of field, film grain, no readable text, no logos, vertical 4:5.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. The face on the DVD cover must be this exact person, perfect identity consistency.",
+  "scene": "tight close-up of a DVD new releases endcap shelf in a 2000s video rental store",
+  "subject": "a clear plastic anti-theft clamshell case holding a DVD whose cover shows a moody thriller-style close-up portrait of the person, black turtleneck, neutral serious expression, not smiling",
+  "details": "thick clamshell plastic with scuffs, fingerprints and bright specular highlights, price sticker area present but blurred and blank, neighboring cases soft and out of focus",
+  "lighting": "warm fluorescent store light with nostalgic tone",
+  "camera": "shallow depth of field, focus on the cover face through the plastic, slight angle, vertical 4:5",
+  "style": "early 2000s nostalgia, soft film grain, photorealistic",
+  "negative": "different face, readable text, real movie titles, logos, brand names, clean new plastic, CGI"
+}`
+  },
+  {
+    titulo: "Editorial no camarim, luz de espelho",
+    categoria: "Editorial",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Moody editorial portrait in a vintage dressing room. She sits in a three-quarter pose looking straight into the camera, one hand running through her long voluminous hair, confident serious expression, large gold hoop earrings. Wearing an elegant black lace slip dress with thin straps. Behind her, a large mirror reflects her back, framed by glowing vanity bulbs. Warm amber backlight and side light from the bulbs outlining her hair and shoulders, dark atmospheric surroundings. 50mm lens, f/1.8, shallow depth of field, rich warm tones, fashion magazine look, natural skin texture, vertical 4:5.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman.",
+  "scene": "vintage dressing room, large mirror with glowing vanity bulbs reflecting her back",
+  "pose": "seated three-quarter pose, one hand running through long voluminous hair, looking into the camera",
+  "expression": "confident, serious",
+  "clothing": "elegant black lace slip dress with thin straps (alternative: black lace lingerie bodysuit, may be blocked)",
+  "accessories": "large gold hoop earrings",
+  "lighting": "warm amber backlight and side light from vanity bulbs, rim light on hair and shoulders, dark surroundings",
+  "camera": "50mm, f/1.8, shallow depth of field, vertical 4:5",
+  "style": "moody fashion magazine editorial, warm rich tones, natural skin texture"
+}`
+  },
+  {
+    titulo: "Selfie no quarto, body bege",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual selfie taken with an iPhone front camera, eye level, medium shot, vertical 9:16. She leans slightly toward the camera holding the phone with one hand, neutral expression with a slight smile, makeup with emphasis on the eyes, wearing a sleeveless beige bodysuit. Bright bedroom with a knitted bedspread, upholstered headboard, a large mirror and a window in the background. Soft natural daylight from the window. Real phone photo, slight motion blur, not studio, not CGI.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman, 25+ years old.",
+  "camera": "iPhone front camera selfie, eye level, medium shot, short distance, vertical 9:16",
+  "pose": "body slightly leaning toward the camera, holding the phone with one hand",
+  "expression": "neutral with a slight smile",
+  "clothing": "sleeveless beige bodysuit, makeup with emphasis on the eyes",
+  "scene": "bright bedroom, bed with knitted bedspread, upholstered headboard, large mirror, window in the background",
+  "lighting": "soft diffuse natural window light, no studio light, no ring light, no flash",
+  "realism": "real cell phone photo, slight motion blur, not CGI, not 3D, not studio"
+}`
+  },
+  {
+    titulo: "Selfie no quarto, conjunto rosa",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual selfie taken with an iPhone front camera, eye level, medium shot, vertical 9:16. She is sitting on her bed with legs bent, one hand resting on the bed, soft neutral expression, light makeup, wearing a light pink knit top and shorts set. Bedroom with wardrobe, a shelf with stuffed animals and a heart-shaped pillow. Soft natural daylight from a window. Real phone photo, slight motion blur, not studio, not CGI.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman, 25+ years old.",
+  "camera": "iPhone front camera selfie, eye level, medium shot, short distance, vertical 9:16",
+  "pose": "sitting on the bed with legs bent, one hand resting on the bed",
+  "expression": "soft and neutral",
+  "clothing": "light pink knit top and shorts set, light makeup",
+  "scene": "bedroom with bed, wardrobe, shelf with stuffed animals, heart-shaped pillow",
+  "lighting": "soft diffuse natural daylight through a window, no studio light, no ring light, no flash",
+  "realism": "real cell phone photo, slight motion blur, not CGI, not 3D, not studio"
+}`
+  },
+  {
+    titulo: "Corredora em prova de rua",
+    categoria: "Esporte",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Running in a road race, mid-stride, joyful smile, light sweat, black running outfit, wireless earbuds, mirrored sport sunglasses, race bib, holding a phone in one hand and waving with the other. Front medium shot, 85mm, f/2.8, bright daylight, blurred runners and greenery behind, vertical 9:16.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age",
+  "subject": "the person from the reference running in a road race, joyful energetic smile, slight perspiration",
+  "clothing": "black performance running outfit, wireless earbuds, mirrored sport sunglasses, race bib",
+  "pose": "dynamic mid-run stride, one hand holding a smartphone, the other raised playfully",
+  "camera": "front medium action shot, 85mm, f/2.8, fast shutter, vertical 9:16",
+  "lighting": "bright natural daylight, 5500K",
+  "background": "blurred runners, paved street, greenery",
+  "negative": "different face, generic model face, deformed hands, plastic skin, CGI"
+}`
+  },
+  {
+    titulo: "Retrato base do personagem",
+    categoria: "Retrato",
+    genero: "Unissex",
+    drive: "",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Photorealistic head and shoulders portrait, front-facing, neutral expression, plain black t-shirt, soft even studio light, light gray background, 85mm lens, natural unretouched skin.`
+  },
+  {
+    titulo: "Ficha de ângulos",
+    categoria: "Retrato",
+    genero: "Unissex",
+    drive: "",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Character sheet with three views side by side: front, three-quarter and side profile. Identical face in all views, plain black t-shirt, soft studio light, light gray background, photorealistic.`
+  },
+  {
+    titulo: "Macro extremo da boca",
+    categoria: "Macro",
+    genero: "Unissex",
+    drive: "",
+    prompt: `Use the person in the attached image and keep their features exactly the same. Extreme macro of the mouth, visible pores, fine hairs and lip lines, no makeup, no retouching. Soft raking light, 100mm macro lens, extremely shallow depth of field, documentary realism.`
+  },
+  {
+    titulo: "Movimento leve pra vídeo",
+    categoria: "Vídeo",
+    genero: "Unissex",
+    drive: "",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Very slow camera push-in, subtle breathing, natural blink, small head turn toward the camera. Stable face, no morphing.`
+  }
+];
+
+/* ================= daqui pra baixo não precisa mexer ================= */
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const wpp = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MSG_WHATS)}`;
+document.querySelectorAll(".wpp").forEach(a => a.href = wpp);
+document.querySelectorAll(".insta").forEach(a => a.href = `https://instagram.com/${INSTAGRAM}`);
+$("yr").textContent = new Date().getFullYear();
+
+/* navegação */
+function go(){
+  const p = (location.hash.slice(1) || "videos");
+  const page = $("p-" + p) ? p : "videos";
+  document.querySelectorAll(".page").forEach(s => s.classList.toggle("on", s.id === "p-" + page));
+  document.querySelectorAll(".menu a").forEach(a => a.classList.toggle("on", a.dataset.p === page));
+  $("menu").classList.remove("open");
+  document.title = "RODS | " + {videos:"Filmes",fotografias:"Fotografias",prompts:"Galeria de Prompts",sobre:"Sobre"}[page];
+  window.scrollTo(0, 0);
+}
+addEventListener("hashchange", go);
+$("burger").onclick = () => $("menu").classList.toggle("open");
+
+/* vídeos */
+let vcat = "Todos";
+const vcats = [...new Set(VIDEOS.map(v => v.cat))];
+$("stat").textContent = `${VIDEOS.length} trabalhos · ${vcats.length} categorias`;
+function renderVideos(){
+  $("vf").innerHTML = ["Todos", ...vcats].map(c => `<button class="f${c===vcat?" on":""}" data-vc="${esc(c)}">${esc(c)}</button>`).join("");
+  $("works").innerHTML = VIDEOS.map((v,i)=>({v,i})).filter(({v}) => vcat==="Todos" || v.cat===vcat).map(({v,i}) => `
+    <button class="work" data-v="${i}">
+      <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg" alt=""><span class="play">▶</span></div>
+      <div class="wmeta"><b>${esc(v.t)}</b><span>${esc(v.cat)}</span></div>
+      ${v.d ? `<div class="wdesc">${esc(v.d)}</div>` : ""}
+    </button>`).join("");
+}
+
+/* modal */
+const dlg = $("dlg");
+let fotoIdx = 0;
+function openDlg(html){ $("dlgIn").innerHTML = html; dlg.showModal(); }
+function closeDlg(){ dlg.close(); $("dlgIn").innerHTML = ""; }
+dlg.addEventListener("close", () => $("dlgIn").innerHTML = "");
+function openVideo(i){
+  const v = VIDEOS[i];
+  openDlg(`<div class="lb"><button class="x" data-x>×</button><iframe src="https://www.youtube.com/embed/${v.yt}?autoplay=1&rel=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${esc(v.t)}"></iframe><div class="lcap">${esc(v.t)} · ${esc(v.cat)}</div></div>`);
+}
+function openFoto(i){
+  fotoIdx = (i + FOTOS.length) % FOTOS.length; const f = FOTOS[fotoIdx];
+  openDlg(`<div class="lb"><button class="x" data-x>×</button><button class="ar l" data-fn="-1">←</button><img src="${esc(f.img)}" alt="${esc(f.t)}"><button class="ar r" data-fn="1">→</button><div class="lcap">${esc(f.t)} · ${esc(f.d)}</div></div>`);
+}
+
+/* fotos */
+let fcat = "Todas";
+function renderFotos(){
+  $("pf").innerHTML = ["Todas", ...new Set(FOTOS.map(f => f.t))].map(c => `<button class="f${c===fcat?" on":""}" data-fc="${esc(c)}">${esc(c)}</button>`).join("");
+  $("photos").innerHTML = FOTOS.map((f,i)=>({f,i})).filter(({f}) => fcat==="Todas" || f.t===fcat).map(({f,i}) => `<button class="ph" data-f="${i}"><img loading="lazy" src="${esc(f.thumb)}" alt="${esc(f.t)}"></button>`).join("");
+}
+renderFotos();
+
+/* prompts */
+let pcat = "Todos", pgen = "Todos";
+const isJson = t => t.trim().startsWith("{");
+const cores = ["#2b3a12,#0f1408","#1d2b3a,#0a0f14","#3a1d2b,#140a0f","#3a2e12,#141008","#12303a,#08120f","#2a123a,#0f0814"];
+const pimg = p => p.drive ? `https://lh3.googleusercontent.com/d/${p.drive}=w900` : (p.imagem || "");
+const pmedia = (p,i) => `<div class="pph" style="background:linear-gradient(160deg,${cores[i%cores.length]})"><div><b>${esc(p.titulo.split(" ")[0])}</b>imagem em breve</div></div>${pimg(p)?`<img src="${esc(pimg(p))}" alt="${esc(p.titulo)}" loading="lazy" onerror="this.remove()">`:""}`;
+function renderPrompts(){
+  const okGen = p => pgen==="Todos" || p.genero===pgen || p.genero==="Unissex";
+  $("pgen").innerHTML = ["Todos","Feminino","Masculino"].map(g => `<button class="${g===pgen?"on":""}" data-pg="${g}">${g}</button>`).join("");
+  const cats = ["Todos", ...new Set(PROMPTS.filter(okGen).map(p => p.categoria))];
+  if (!cats.includes(pcat)) pcat = "Todos";
+  $("ptabs").innerHTML = cats.map(c => `<button class="tab${c===pcat?" on":""}" data-pc="${esc(c)}">${CATEGORIAS_NOVAS.includes(c)?'<span class="new">NOVO</span>':""}${esc(c)}</button>`).join("");
+  $("pgrid").innerHTML = PROMPTS.map((p,i)=>({p,i})).filter(({p}) => okGen(p) && (pcat==="Todos" || p.categoria===pcat)).map(({p,i}) => `
+    <article class="pcard">
+      <div class="pmedia">${pmedia(p,i)}<span class="badge">${isJson(p.prompt)?"JSON":"TEXT"}</span><button class="expand" data-po="${i}" aria-label="Ver prompt">⤢</button><div class="snip${isJson(p.prompt)?" mono":""}">${esc(p.prompt.replace(/\s+/g," "))}</div></div>
+      <div class="pbody"><div class="ptitle">${esc(p.titulo)}</div>
+        <a class="btn lime" href="${LINK_FLOW}" target="_blank" rel="noopener" data-pf="${i}">✦ Abrir no Flow</a>
+        <button class="btn" data-pcp="${i}">⧉ Copiar Prompt</button></div>
+    </article>`).join("");
+}
+let pmode = "prompt";
+function openPrompt(i, mode){
+  const p = PROMPTS[i]; pmode = (mode==="json" && p.json) ? "json" : "prompt";
+  const txt = p[pmode], tabs = p.json ? `<div class="ptg"><button class="${pmode==="prompt"?"on":""}" data-pt="${i}" data-m="prompt">Prompt</button><button class="${pmode==="json"?"on":""}" data-pt="${i}" data-m="json">JSON</button></div>` : "";
+  openDlg(`<div class="lb"><button class="x" data-x>×</button><div class="pd"><div class="pmedia">${pmedia(p,i)}</div><div class="side"><div><div class="cat">${esc(p.categoria)} · ${isJson(txt)?"JSON":"TEXT"}</div><h3>${esc(p.titulo)}</h3></div>${tabs}<pre>${esc(txt)}</pre><div class="row"><a class="btn lime" href="${LINK_FLOW}" target="_blank" rel="noopener" data-pf="${i}">✦ Abrir no Flow</a><button class="btn" data-pcp="${i}">⧉ Copiar</button></div></div></div></div>`);
+}
+async function copiar(t){
+  try{ await navigator.clipboard.writeText(t); }
+  catch(e){ const a=document.createElement("textarea"); a.value=t; document.body.appendChild(a); a.select(); try{document.execCommand("copy")}catch(_){} a.remove(); }
+  const el=$("toast"); el.classList.add("show"); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove("show"),1600);
+}
+
+/* cliques */
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-fc],[data-vc],[data-v],[data-f],[data-fn],[data-x],[data-pc],[data-po],[data-pf],[data-pcp],[data-pt],[data-pg]");
+  if (!b){ if (e.target.classList?.contains("lb")) closeDlg(); return; }
+  const d = b.dataset;
+  if (d.fc){ fcat = d.fc; renderFotos(); }
+  else if (d.vc){ vcat = d.vc; renderVideos(); }
+  else if (d.v) openVideo(+d.v);
+  else if (d.f) openFoto(+d.f);
+  else if (d.fn) openFoto(fotoIdx + (+d.fn));
+  else if (d.x !== undefined) closeDlg();
+  else if (d.pc){ pcat = d.pc; renderPrompts(); }
+  else if (d.po) openPrompt(+d.po);
+  else if (d.pg){ pgen = d.pg; renderPrompts(); }
+  else if (d.pt) openPrompt(+d.pt, d.m);
+  else if (d.pf) copiar(dlg.open ? PROMPTS[d.pf][pmode] : PROMPTS[d.pf].prompt);
+  else if (d.pcp) copiar(dlg.open ? PROMPTS[d.pcp][pmode] : PROMPTS[d.pcp].prompt);
+});
+addEventListener("keydown", e => {
+  if (!dlg.open || !$("dlgIn").querySelector("[data-fn]")) return;
+  if (e.key === "ArrowRight") openFoto(fotoIdx + 1);
+  if (e.key === "ArrowLeft") openFoto(fotoIdx - 1);
+});
+
+renderVideos(); renderPrompts(); go();
+</script>
+</body>
+</html>
