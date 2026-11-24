@@ -447,6 +447,38 @@ const FOTOS = [
 const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
 const PROMPTS = [
   {
+    titulo: "Look de crochê no jardim tropical",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "1nH9tj6edUe_NefUft1BFf8SSIjWgw4pp",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Standing in a lush tropical garden, looking off to the side with a soft confident smile, one hand holding the front tie of her top. Wearing a white crochet co-ord set: open-knit long-sleeve cardigan with front ties over a matching crochet bralette top, and a crochet mini skirt with side ties, thin gold necklace. Background of monstera leaves, palms and ferns, woven wicker vases, dried palm fans and terracotta pots. Soft overcast natural light, lush greens and warm neutrals, boho beach-resort editorial feel. 50mm, shallow depth of field, three-quarter body, vertical 9:16, real photo, natural skin texture, not CGI.`
+  },
+  {
+    titulo: "Selfie noturna com flash e óculos",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "16C2xOdBev6XaRPu-OkbMcHYFWrdIdmxC",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same, with freckles only if present in the reference. Authentic handheld bedroom selfie at night: one arm extended toward the camera, the other hand lightly adjusting slim black rectangular eyeglasses. A small white plush cat toy rests on her shoulder. Soft, calm, relaxed expression, cozy late-night mood. Wearing a fitted white ribbed camisole with lace trim and cream lounge shorts. Modern minimalist bedroom with an unmade gray bed, warm bedside lamp, vanity desk with makeup, large windows with sheer curtains and city lights outside, neutral decor. Direct phone flash mixed with warm lamp light, crisp flash shadows, bright catchlights. iPhone front camera look, 26mm, vertical, centered, background slightly soft but readable. Clean-girl influencer selfie, Portra-like skin tones, natural skin texture with visible pores, real photo, not CGI.`
+  },
+  {
+    titulo: "Editorial no camarim, luz de espelho",
+    categoria: "Editorial",
+    genero: "Feminino",
+    drive: "1LHZvow2RKZUvk7oBriytExi00J_dpuzR",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Moody editorial portrait in a vintage dressing room. She sits in a three-quarter pose looking straight into the camera, one hand running through her long voluminous hair, confident serious expression, large gold hoop earrings. Wearing an elegant black lace slip dress with thin straps. Behind her, a large mirror reflects her back, framed by glowing vanity bulbs. Warm amber backlight and side light from the bulbs outlining her hair and shoulders, dark atmospheric surroundings. 50mm lens, f/1.8, shallow depth of field, rich warm tones, fashion magazine look, natural skin texture, vertical 4:5.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman.",
+  "scene": "vintage dressing room, large mirror with glowing vanity bulbs reflecting her back",
+  "pose": "seated three-quarter pose, one hand running through long voluminous hair, looking into the camera",
+  "expression": "confident, serious",
+  "clothing": "elegant black lace slip dress with thin straps (alternative: black lace lingerie bodysuit, may be blocked)",
+  "accessories": "large gold hoop earrings",
+  "lighting": "warm amber backlight and side light from vanity bulbs, rim light on hair and shoulders, dark surroundings",
+  "camera": "50mm, f/1.8, shallow depth of field, vertical 4:5",
+  "style": "moody fashion magazine editorial, warm rich tones, natural skin texture"
+}`
+  },
+  {
     titulo: "Carro esportivo na serra com neblina",
     categoria: "Lifestyle",
     genero: "Masculino",
@@ -586,36 +618,11 @@ Negative: different face, generic model face, beautified face, CGI`
 }`
   },
   {
-    titulo: "Selfie noturna com flash e óculos",
-    categoria: "Lifestyle",
-    genero: "Feminino",
-    drive: "",
-    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same, with freckles only if present in the reference. Authentic handheld bedroom selfie at night: one arm extended toward the camera, the other hand lightly adjusting slim black rectangular eyeglasses. A small white plush cat toy rests on her shoulder. Soft, calm, relaxed expression, cozy late-night mood. Wearing a fitted white ribbed camisole with lace trim and cream lounge shorts. Modern minimalist bedroom with an unmade gray bed, warm bedside lamp, vanity desk with makeup, large windows with sheer curtains and city lights outside, neutral decor. Direct phone flash mixed with warm lamp light, crisp flash shadows, bright catchlights. iPhone front camera look, 26mm, vertical, centered, background slightly soft but readable. Clean-girl influencer selfie, Portra-like skin tones, natural skin texture with visible pores, real photo, not CGI.`
-  },
-  {
     titulo: "Selfie no espelho, quarto azul-marinho",
     categoria: "Lifestyle",
     genero: "Feminino",
     drive: "",
     prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual full-body mirror selfie in a tidy modern bedroom, taken with an iPhone in her raised hand near her face, phone partly covering her face, head slightly tilted, calm confident expression, standing relaxed with weight on one leg. Wearing a wine-red ribbed bikini set with a small gold ring detail (alternative: wine-red ribbed sports top and high-waisted shorts), white pearl bead bracelet, barefoot. Floor mirror with a gold frame edge visible on the left. Navy blue accent wall behind a bed with a light gray tufted headboard, white bedding with navy pillows, a chunky navy knit blanket, a gray tabby cat lying on the bed. White sheer curtain with greenery outside, light beige porcelain floor, white nightstand with a pink tumbler, a chair with clothes piled in the corner. Soft natural window light from the left, warm summer morning. Real iPhone photo, 24mm wide-angle with slight edge distortion, light JPEG compression, slight digital noise, Smart HDR look, UGC Instagram story style, not studio, not CGI.`
-  },
-  {
-    titulo: "Editorial no camarim, luz de espelho",
-    categoria: "Editorial",
-    genero: "Feminino",
-    drive: "",
-    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Moody editorial portrait in a vintage dressing room. She sits in a three-quarter pose looking straight into the camera, one hand running through her long voluminous hair, confident serious expression, large gold hoop earrings. Wearing an elegant black lace slip dress with thin straps. Behind her, a large mirror reflects her back, framed by glowing vanity bulbs. Warm amber backlight and side light from the bulbs outlining her hair and shoulders, dark atmospheric surroundings. 50mm lens, f/1.8, shallow depth of field, rich warm tones, fashion magazine look, natural skin texture, vertical 4:5.`,
-    json: `{
-  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman.",
-  "scene": "vintage dressing room, large mirror with glowing vanity bulbs reflecting her back",
-  "pose": "seated three-quarter pose, one hand running through long voluminous hair, looking into the camera",
-  "expression": "confident, serious",
-  "clothing": "elegant black lace slip dress with thin straps (alternative: black lace lingerie bodysuit, may be blocked)",
-  "accessories": "large gold hoop earrings",
-  "lighting": "warm amber backlight and side light from vanity bulbs, rim light on hair and shoulders, dark surroundings",
-  "camera": "50mm, f/1.8, shallow depth of field, vertical 4:5",
-  "style": "moody fashion magazine editorial, warm rich tones, natural skin texture"
-}`
   },
   {
     titulo: "Selfie no quarto, body bege",
