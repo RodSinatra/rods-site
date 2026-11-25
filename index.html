@@ -447,6 +447,34 @@ const FOTOS = [
 const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
 const PROMPTS = [
   {
+    titulo: "RAW no alto, Cristo Redentor",
+    categoria: "Editorial",
+    genero: "Unissex",
+    drive: "1ZmGJZKcxitN2A4SMpE1f0l5BbIThO4cs",
+    prompt: `Use the person in the attached image and keep their face, hair, skin tone, body and any tattoos or piercings exactly the same. Editorial fashion photo on the stone staircase at Christ the Redeemer in Rio de Janeiro, with the statue clearly visible behind them against an open sky and green mountains. They sit upright on a stone step, both hands resting on the knees, head turned slightly to the side, looking away from the camera with a serious, introspective, confident expression. Wearing a black t-shirt with the word "RAW" in bold white letters across the chest, light blue shorts, clean white sneakers and dark sunglasses with realistic reflections. A few tourists walking and taking photos in the background. Strong natural daylight with defined shadows, natural skin tones, deep blacks, warm stone textures, rich sky. 50mm, camera slightly below eye level, medium-wide framing, vertical 4:5, real photo, not CGI, no misspelled text.`
+  },
+  {
+    titulo: "Perfil com fone, neon azul e vermelho",
+    categoria: "Estúdio",
+    genero: "Unissex",
+    drive: "1BxuyzsN3F28k2Db8hDWF4acuNPpR8Aw1",
+    prompt: `Use the person in the attached image and keep their face, beard, skin tone and any piercings exactly the same. Side profile portrait facing right, eyes closed, calm expression, on a pure black background. Wearing a plain dark hoodie with the hood up and silver over-ear headphones. Dual neon lighting: cyan/turquoise key light from the front right and a vivid red rim light from the opposite side, high contrast, strong rim glow, glossy reflections on the headphones, soft cinematic bloom. Photorealistic, natural skin texture with only light retouching, f/2 shallow depth of field, minimal composition, no other elements, no logos, vertical 4:5.`
+  },
+  {
+    titulo: "Retrato de podcast, luz azul e roxa",
+    categoria: "Estúdio",
+    genero: "Unissex",
+    drive: "1EOVINShXt5zraFyMSpfO99vQVS-yfoag",
+    prompt: `Use the person in the attached image and keep their face, eye color, skin tone, hair and any piercings exactly the same, with natural skin texture: visible pores, small expression marks, no beauty filter. Podcast portrait in a cozy professional recording studio. Seated upright at a light wood desk, leaning slightly forward, one hand resting under the chin, the other in a gentle gesture, looking straight into the lens with a serious, confident, present expression, lips closed. Wearing a slightly satin black tailored blazer over a black top and delicate gold bracelets on both wrists, no rings. A black broadcast dynamic microphone on an articulated boom arm enters from the right, beside the face without covering the mouth. Dark wood bookshelf behind with books, succulents and small art objects, black over-ear headphones hanging on the side and another pair on the desk. Soft wide key light from the right of camera, deep blue and purple LED glow on the background, warm desk lamp in the back, strong contrast between the lit subject and the dark colorful background. iPhone look, 24mm with slight barrel distortion, vertical 9:16, focus locked on the eyes, soft background bokeh, visible grain, slightly lo-fi, real photo, not CGI, no text, no logos.`
+  },
+  {
+    titulo: "Rolê noite no bar lotado",
+    categoria: "Lifestyle",
+    genero: "Unissex",
+    drive: "1r5JzXM4g0ky5uQXxvM-nRiiKJvc0ftRF",
+    prompt: `Use the person in the attached image and keep their face, hair, beard, skin tone and any piercings exactly the same. Candid night out photo in a crowded bar and nightclub. Standing in the middle of the crowd, holding a glass with ice and a black straw at chest height, looking off to the side mid-conversation, relaxed half smile. Wearing a dark olive bomber jacket over a black t-shirt. Behind: people dancing and talking, a glowing backlit bar with bottles on shelves, pink and blue neon light strips, haze in the air, warm ceiling spotlights. Mixed pink, magenta and blue club lighting on the face, deep shadows. Shot like a phone photo with flash off, 35mm, vertical 9:16, subject sharp, crowd slightly soft, visible grain and slight motion blur, real candid nightlife photo, not CGI, no logos.`
+  },
+  {
     titulo: "Carro esportivo na serra com neblina",
     categoria: "Lifestyle",
     genero: "Masculino",
@@ -502,18 +530,18 @@ Identity: same person as the reference image, exact face and features, do not be
 Negative: different face, generic model face, beautified face, CGI`
   },
   {
+    titulo: "Close cinematográfico, feixe de luz no olhar (masculino)",
+    categoria: "Retrato",
+    genero: "Masculino",
+    drive: "1StJ03MoaUTyr8l_b1b3LT2pBqeItpDQe",
+    prompt: `Use the person in the attached image and keep their face, eye color, skin tone, hair and facial hair exactly the same. Hyper-realistic cinematic close-up portrait. Hair slightly wind-swept, a few strands falling across the face. Gaze directed upward and to the right, catching a sharp diagonal beam of natural light that hits the cheekbone, nose and lips, with the rest of the face falling into soft shadow. Wearing a lightweight silk shirt with an elegant natural finish. Dark moody background, high contrast, detailed natural skin texture with visible pores, no beauty retouching, shallow depth of field, vertical 4:5, real photo, not CGI.`
+  },
+  {
     titulo: "Close low-key, meio rosto iluminado",
     categoria: "Retrato",
     genero: "Masculino",
     drive: "1u2v8mFfaf3N-VRhdFvD2fyDvY_JLz4Cf",
     prompt: `Use the man in the attached image and keep his face, hair, beard, skin tone and any piercings exactly the same, with natural skin texture, visible pores, not airbrushed. Cinematic low-key close-up portrait, head and shoulders, centered and powerful, looking straight into the camera with a serious, calm, intense gaze. Wearing a minimal black jacket with a high collar. Deep black background fading into shadow. Soft but directional side light leaving half of the face lit and half in shadow, strong contrast, 5000K with subtle warm highlights. f/1.8, very shallow depth of field, vertical 9:16, dark tones, slightly desaturated film look, real photo, not CGI, no text.`
-  },
-  {
-    titulo: "Setup gamer, cadeira RGB",
-    categoria: "Estúdio",
-    genero: "Masculino",
-    drive: "1CQgL4XL6aUQvrkwPU3TRvw1Py9xmbRPb",
-    prompt: `Use the man in the attached image and keep his face, beard, skin tone and any piercings exactly the same, with natural skin texture and subtle pores. Professional studio photo with an urban gamer and streamer vibe. He sits in a black gaming chair with colorful RGB light strips in blue, pink and green along its edges and base, leaning slightly forward, torso in a three-quarter turn, hands relaxed on his thighs, looking straight into the camera with a focused, slightly serious expression. Wearing a plain black cap with no logos, an oversized solid black hoodie with the hood down and visible drawstrings, matching black sweatpants and white high-top sneakers. Solid black seamless background with RGB LED glow on the floor. Soft LED panel key light from the front left, subtle fill from the right, medium-high contrast. 50mm, camera 10 to 15 degrees above eye level, framing from head to mid-thigh, vertical 3:4, clean professional finish, real photo, not CGI, no logos.`
   },
   {
     titulo: "Painel de conferência com microfone",
@@ -523,39 +551,11 @@ Negative: different face, generic model face, beautified face, CGI`
     prompt: `Use the man in the attached image and keep his face, hair, beard, skin tone and any piercings exactly the same, with natural skin texture and realistic pores. Candid photo of him in a live panel discussion on a conference stage, seated and leaning slightly forward, one hand holding a handheld microphone near his mouth, the other hand gesturing mid-speech, looking toward the interviewer with a thoughtful, engaged, analytical expression. Wearing a gray tailored blazer over a black textured shirt, round black eyeglasses and a subtle ring. Dark blurred background with blue and purple stage lights and soft bokeh. Soft diffused stage light from the front with a subtle side accent, bright highlights, 5600K. f/2.8, shallow depth of field, medium close-up, vertical 9:16, cool tones with subtle contrast, real event photography, not CGI, no readable text, no logos.`
   },
   {
-    titulo: "Close cinematográfico, feixe de luz no olhar (masculino)",
-    categoria: "Retrato",
+    titulo: "Setup gamer, cadeira RGB",
+    categoria: "Estúdio",
     genero: "Masculino",
-    drive: "1StJ03MoaUTyr8l_b1b3LT2pBqeItpDQe",
-    prompt: `Use the person in the attached image and keep their face, eye color, skin tone, hair and facial hair exactly the same. Hyper-realistic cinematic close-up portrait. Hair slightly wind-swept, a few strands falling across the face. Gaze directed upward and to the right, catching a sharp diagonal beam of natural light that hits the cheekbone, nose and lips, with the rest of the face falling into soft shadow. Wearing a lightweight silk shirt with an elegant natural finish. Dark moody background, high contrast, detailed natural skin texture with visible pores, no beauty retouching, shallow depth of field, vertical 4:5, real photo, not CGI.`
-  },
-  {
-    titulo: "RAW no alto, Cristo Redentor",
-    categoria: "Editorial",
-    genero: "Unissex",
-    drive: "1ZmGJZKcxitN2A4SMpE1f0l5BbIThO4cs",
-    prompt: `Use the person in the attached image and keep their face, hair, skin tone, body and any tattoos or piercings exactly the same. Editorial fashion photo on the stone staircase at Christ the Redeemer in Rio de Janeiro, with the statue clearly visible behind them against an open sky and green mountains. They sit upright on a stone step, both hands resting on the knees, head turned slightly to the side, looking away from the camera with a serious, introspective, confident expression. Wearing a black t-shirt with the word "RAW" in bold white letters across the chest, light blue shorts, clean white sneakers and dark sunglasses with realistic reflections. A few tourists walking and taking photos in the background. Strong natural daylight with defined shadows, natural skin tones, deep blacks, warm stone textures, rich sky. 50mm, camera slightly below eye level, medium-wide framing, vertical 4:5, real photo, not CGI, no misspelled text.`
-  },
-  {
-    titulo: "Perfil com fone, neon azul e vermelho",
-    categoria: "Estúdio",
-    genero: "Unissex",
-    drive: "1BxuyzsN3F28k2Db8hDWF4acuNPpR8Aw1",
-    prompt: `Use the person in the attached image and keep their face, beard, skin tone and any piercings exactly the same. Side profile portrait facing right, eyes closed, calm expression, on a pure black background. Wearing a plain dark hoodie with the hood up and silver over-ear headphones. Dual neon lighting: cyan/turquoise key light from the front right and a vivid red rim light from the opposite side, high contrast, strong rim glow, glossy reflections on the headphones, soft cinematic bloom. Photorealistic, natural skin texture with only light retouching, f/2 shallow depth of field, minimal composition, no other elements, no logos, vertical 4:5.`
-  },
-  {
-    titulo: "Retrato de podcast, luz azul e roxa",
-    categoria: "Estúdio",
-    genero: "Unissex",
-    drive: "1EOVINShXt5zraFyMSpfO99vQVS-yfoag",
-    prompt: `Use the person in the attached image and keep their face, eye color, skin tone, hair and any piercings exactly the same, with natural skin texture: visible pores, small expression marks, no beauty filter. Podcast portrait in a cozy professional recording studio. Seated upright at a light wood desk, leaning slightly forward, one hand resting under the chin, the other in a gentle gesture, looking straight into the lens with a serious, confident, present expression, lips closed. Wearing a slightly satin black tailored blazer over a black top and delicate gold bracelets on both wrists, no rings. A black broadcast dynamic microphone on an articulated boom arm enters from the right, beside the face without covering the mouth. Dark wood bookshelf behind with books, succulents and small art objects, black over-ear headphones hanging on the side and another pair on the desk. Soft wide key light from the right of camera, deep blue and purple LED glow on the background, warm desk lamp in the back, strong contrast between the lit subject and the dark colorful background. iPhone look, 24mm with slight barrel distortion, vertical 9:16, focus locked on the eyes, soft background bokeh, visible grain, slightly lo-fi, real photo, not CGI, no text, no logos.`
-  },
-  {
-    titulo: "Rolê noite no bar lotado",
-    categoria: "Lifestyle",
-    genero: "Unissex",
-    drive: "1r5JzXM4g0ky5uQXxvM-nRiiKJvc0ftRF",
-    prompt: `Use the person in the attached image and keep their face, hair, beard, skin tone and any piercings exactly the same. Candid night out photo in a crowded bar and nightclub. Standing in the middle of the crowd, holding a glass with ice and a black straw at chest height, looking off to the side mid-conversation, relaxed half smile. Wearing a dark olive bomber jacket over a black t-shirt. Behind: people dancing and talking, a glowing backlit bar with bottles on shelves, pink and blue neon light strips, haze in the air, warm ceiling spotlights. Mixed pink, magenta and blue club lighting on the face, deep shadows. Shot like a phone photo with flash off, 35mm, vertical 9:16, subject sharp, crowd slightly soft, visible grain and slight motion blur, real candid nightlife photo, not CGI, no logos.`
+    drive: "1CQgL4XL6aUQvrkwPU3TRvw1Py9xmbRPb",
+    prompt: `Use the man in the attached image and keep his face, beard, skin tone and any piercings exactly the same, with natural skin texture and subtle pores. Professional studio photo with an urban gamer and streamer vibe. He sits in a black gaming chair with colorful RGB light strips in blue, pink and green along its edges and base, leaning slightly forward, torso in a three-quarter turn, hands relaxed on his thighs, looking straight into the camera with a focused, slightly serious expression. Wearing a plain black cap with no logos, an oversized solid black hoodie with the hood down and visible drawstrings, matching black sweatpants and white high-top sneakers. Solid black seamless background with RGB LED glow on the floor. Soft LED panel key light from the front left, subtle fill from the right, medium-high contrast. 50mm, camera 10 to 15 degrees above eye level, framing from head to mid-thigh, vertical 3:4, clean professional finish, real photo, not CGI, no logos.`
   },
   {
     titulo: "Passeio de lancha no lago",
