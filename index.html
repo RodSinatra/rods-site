@@ -447,6 +447,71 @@ const FOTOS = [
 const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
 const PROMPTS = [
   {
+    titulo: "Selfie no quarto, body bege",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "1B05cuBkorXh_8eZ04G8iBlejzpp207fX",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual selfie taken with an iPhone front camera, eye level, medium shot, vertical 9:16. She leans slightly toward the camera holding the phone with one hand, neutral expression with a slight smile, makeup with emphasis on the eyes, wearing a sleeveless beige bodysuit. Bright bedroom with a knitted bedspread, upholstered headboard, a large mirror and a window in the background. Soft natural daylight from the window. Real phone photo, slight motion blur, not studio, not CGI.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman, 25+ years old.",
+  "camera": "iPhone front camera selfie, eye level, medium shot, short distance, vertical 9:16",
+  "pose": "body slightly leaning toward the camera, holding the phone with one hand",
+  "expression": "neutral with a slight smile",
+  "clothing": "sleeveless beige bodysuit, makeup with emphasis on the eyes",
+  "scene": "bright bedroom, bed with knitted bedspread, upholstered headboard, large mirror, window in the background",
+  "lighting": "soft diffuse natural window light, no studio light, no ring light, no flash",
+  "realism": "real cell phone photo, slight motion blur, not CGI, not 3D, not studio"
+}`
+  },
+  {
+    titulo: "Selfie no quarto, conjunto rosa",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "1zeH8SV5dPG9Sw3lAqxTRVpAFFjbL-bUf",
+    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual selfie taken with an iPhone front camera, eye level, medium shot, vertical 9:16. She is sitting on her bed with legs bent, one hand resting on the bed, soft neutral expression, light makeup, wearing a light pink knit top and shorts set. Bedroom with wardrobe, a shelf with stuffed animals and a heart-shaped pillow. Soft natural daylight from a window. Real phone photo, slight motion blur, not studio, not CGI.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman, 25+ years old.",
+  "camera": "iPhone front camera selfie, eye level, medium shot, short distance, vertical 9:16",
+  "pose": "sitting on the bed with legs bent, one hand resting on the bed",
+  "expression": "soft and neutral",
+  "clothing": "light pink knit top and shorts set, light makeup",
+  "scene": "bedroom with bed, wardrobe, shelf with stuffed animals, heart-shaped pillow",
+  "lighting": "soft diffuse natural daylight through a window, no studio light, no ring light, no flash",
+  "realism": "real cell phone photo, slight motion blur, not CGI, not 3D, not studio"
+}`
+  },
+  {
+    titulo: "Corredora em prova de rua",
+    categoria: "Esporte",
+    genero: "Feminino",
+    drive: "1P3yETnmDBauxaQ1jRzNqvdmMeCvO2XmL",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Running in a road race, mid-stride, joyful smile, light sweat, black running outfit, wireless earbuds, mirrored sport sunglasses, race bib, holding a phone in one hand and waving with the other. Front medium shot, 85mm, f/2.8, bright daylight, blurred runners and greenery behind, vertical 9:16.`,
+    json: `{
+  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age",
+  "subject": "the person from the reference running in a road race, joyful energetic smile, slight perspiration",
+  "clothing": "black performance running outfit, wireless earbuds, mirrored sport sunglasses, race bib",
+  "pose": "dynamic mid-run stride, one hand holding a smartphone, the other raised playfully",
+  "camera": "front medium action shot, 85mm, f/2.8, fast shutter, vertical 9:16",
+  "lighting": "bright natural daylight, 5500K",
+  "background": "blurred runners, paved street, greenery",
+  "negative": "different face, generic model face, deformed hands, plastic skin, CGI"
+}`
+  },
+  {
+    titulo: "Retrato base do personagem",
+    categoria: "Retrato",
+    genero: "Unissex",
+    drive: "1fvxSm95Tne4cFPhprlcMygCA-lFC4rru",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Photorealistic head and shoulders portrait, front-facing, neutral expression, plain black t-shirt, soft even studio light, light gray background, 85mm lens, natural unretouched skin.`
+  },
+  {
+    titulo: "Movimento leve pra vídeo",
+    categoria: "Vídeo",
+    genero: "Unissex",
+    drive: "1I6ksLf26dVY12wOh_uDqhPLG_gjth0db",
+    prompt: `Use the person in the attached image and keep their face exactly the same. Very slow camera push-in, subtle breathing, natural blink, small head turn toward the camera. Stable face, no morphing.`
+  },
+  {
     titulo: "Selfie no espelho, quarto azul-marinho",
     categoria: "Lifestyle",
     genero: "Feminino",
@@ -644,71 +709,6 @@ Negative: different face, generic model face, beautified face, CGI`
   "style": "early 2000s nostalgia, soft film grain, photorealistic",
   "negative": "different face, readable text, real movie titles, logos, brand names, clean new plastic, CGI"
 }`
-  },
-  {
-    titulo: "Selfie no quarto, body bege",
-    categoria: "Lifestyle",
-    genero: "Feminino",
-    drive: "",
-    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual selfie taken with an iPhone front camera, eye level, medium shot, vertical 9:16. She leans slightly toward the camera holding the phone with one hand, neutral expression with a slight smile, makeup with emphasis on the eyes, wearing a sleeveless beige bodysuit. Bright bedroom with a knitted bedspread, upholstered headboard, a large mirror and a window in the background. Soft natural daylight from the window. Real phone photo, slight motion blur, not studio, not CGI.`,
-    json: `{
-  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman, 25+ years old.",
-  "camera": "iPhone front camera selfie, eye level, medium shot, short distance, vertical 9:16",
-  "pose": "body slightly leaning toward the camera, holding the phone with one hand",
-  "expression": "neutral with a slight smile",
-  "clothing": "sleeveless beige bodysuit, makeup with emphasis on the eyes",
-  "scene": "bright bedroom, bed with knitted bedspread, upholstered headboard, large mirror, window in the background",
-  "lighting": "soft diffuse natural window light, no studio light, no ring light, no flash",
-  "realism": "real cell phone photo, slight motion blur, not CGI, not 3D, not studio"
-}`
-  },
-  {
-    titulo: "Selfie no quarto, conjunto rosa",
-    categoria: "Lifestyle",
-    genero: "Feminino",
-    drive: "",
-    prompt: `Use the adult woman in the attached image and keep her face, hair and skin tone exactly the same. Casual selfie taken with an iPhone front camera, eye level, medium shot, vertical 9:16. She is sitting on her bed with legs bent, one hand resting on the bed, soft neutral expression, light makeup, wearing a light pink knit top and shorts set. Bedroom with wardrobe, a shelf with stuffed animals and a heart-shaped pillow. Soft natural daylight from a window. Real phone photo, slight motion blur, not studio, not CGI.`,
-    json: `{
-  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age. Adult woman, 25+ years old.",
-  "camera": "iPhone front camera selfie, eye level, medium shot, short distance, vertical 9:16",
-  "pose": "sitting on the bed with legs bent, one hand resting on the bed",
-  "expression": "soft and neutral",
-  "clothing": "light pink knit top and shorts set, light makeup",
-  "scene": "bedroom with bed, wardrobe, shelf with stuffed animals, heart-shaped pillow",
-  "lighting": "soft diffuse natural daylight through a window, no studio light, no ring light, no flash",
-  "realism": "real cell phone photo, slight motion blur, not CGI, not 3D, not studio"
-}`
-  },
-  {
-    titulo: "Corredora em prova de rua",
-    categoria: "Esporte",
-    genero: "Feminino",
-    drive: "",
-    prompt: `Use the person in the attached image and keep their face exactly the same. Running in a road race, mid-stride, joyful smile, light sweat, black running outfit, wireless earbuds, mirrored sport sunglasses, race bib, holding a phone in one hand and waving with the other. Front medium shot, 85mm, f/2.8, bright daylight, blurred runners and greenery behind, vertical 9:16.`,
-    json: `{
-  "identity_lock": "same person as the reference image, exact face and features, do not beautify, do not change age",
-  "subject": "the person from the reference running in a road race, joyful energetic smile, slight perspiration",
-  "clothing": "black performance running outfit, wireless earbuds, mirrored sport sunglasses, race bib",
-  "pose": "dynamic mid-run stride, one hand holding a smartphone, the other raised playfully",
-  "camera": "front medium action shot, 85mm, f/2.8, fast shutter, vertical 9:16",
-  "lighting": "bright natural daylight, 5500K",
-  "background": "blurred runners, paved street, greenery",
-  "negative": "different face, generic model face, deformed hands, plastic skin, CGI"
-}`
-  },
-  {
-    titulo: "Retrato base do personagem",
-    categoria: "Retrato",
-    genero: "Unissex",
-    drive: "",
-    prompt: `Use the person in the attached image and keep their face exactly the same. Photorealistic head and shoulders portrait, front-facing, neutral expression, plain black t-shirt, soft even studio light, light gray background, 85mm lens, natural unretouched skin.`
-  },
-  {
-    titulo: "Movimento leve pra vídeo",
-    categoria: "Vídeo",
-    genero: "Unissex",
-    drive: "",
-    prompt: `Use the person in the attached image and keep their face exactly the same. Very slow camera push-in, subtle breathing, natural blink, small head turn toward the camera. Stable face, no morphing.`
   }
 ];
 
