@@ -73,14 +73,16 @@ h1 em{color:var(--acc)}
 .hint{font-size:12px;letter-spacing:.2em;color:var(--mute)}
 
 /* sobre */
-.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,70px);align-items:center;padding:clamp(60px,9vw,120px) 0}
-.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;filter:grayscale(.2)}
-.about h2{font:400 clamp(40px,5vw,64px)/1 "Instrument Serif",serif;margin:16px 0 22px}
-.about h2 em{color:var(--acc)}
-.about p{color:#c4c4c9;font-size:17px;max-width:52ch;margin-bottom:14px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.tags span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;color:#c9c9cd}
-@media(max-width:820px){.about{grid-template-columns:1fr}.about img{max-width:360px}}
+.about{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(28px,4vw,56px);align-items:start;padding-top:clamp(60px,9vw,120px);padding-bottom:clamp(60px,9vw,120px)}
+.about img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px}
+.about h2{font:500 clamp(44px,6vw,80px)/1.02 Inter,system-ui,sans-serif;letter-spacing:-.03em;margin:16px 0 34px}
+.about h2 em{color:var(--acc);font-style:normal}
+.about-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+.about h3{font-size:18px;font-weight:600;margin:0 0 14px;color:var(--ink)}
+.about p{color:#c4c4c9;font-size:15.5px;line-height:1.65;margin-bottom:14px}
+.about-list{margin:6px 0 0;padding-left:18px;color:#c4c4c9;font-size:15.5px;line-height:1.9}
+.about-list li::marker{color:var(--acc)}
+@media(max-width:900px){.about{grid-template-columns:1fr}.about img{max-width:420px}.about-cols{grid-template-columns:1fr}}
 
 /* prompts */
 .pt-hero{text-align:center;padding:60px 0 26px}
@@ -204,13 +206,28 @@ footer a:hover{color:var(--acc)}
 <!-- ============ SOBRE ============ -->
 <section class="page" id="p-sobre">
   <div class="wrap about">
-    <img src="https://lh3.googleusercontent.com/d/10eWXJE5D7q2L4No8rQ7LdTH2_tw1ar9W=w900" alt="Rodrigo Fernandez" style="object-position:center 25%">
+    <img src="img/rods-sobre.jpg" alt="Rodrigo Fernandez, o Rods, sentado num sofá de couro em estúdio com luz quente" style="object-position:center 30%">
     <div>
-      <div class="kicker">Sobre o Rods</div>
-      <h2>Rodrigo Fernandez, <em>o Rods.</em></h2>
-      <p>Editor de vídeo há mais de 15 anos, fotógrafo e criador de conteúdo em São José dos Campos, SP.</p>
-      <p>Já editei milhares de aulas de infoprodutos, VSLs, anúncios, documentários, reels e festas, pra diversos players do mercado digital. Atendo em português, espanhol e inglês.</p>
-      <div class="tags"><span>Edição</span><span>VSL e ADS</span><span>Documentários</span><span>Reels</span><span>Fotografia</span><span>Filmagem</span></div>
+      <div class="kicker">Por trás dos filmes</div>
+      <h2>Pode me chamar <br>de <em>Rods.</em></h2>
+      <div class="about-cols">
+        <div>
+          <h3>Um olhar, várias histórias.</h3>
+          <p>Sou Rodrigo Fernandez, editor de vídeo, fotógrafo e criador de conteúdo em São José dos Campos, SP. São mais de 15 anos transformando material bruto em histórias, de filmes que pedem tempo pra serem contados a vídeos que precisam prender a atenção nos primeiros segundos.</p>
+          <p>Nesse caminho editei milhares de aulas de infoprodutos, VSLs, anúncios, documentários, reels e coberturas de festas pra diversos players do mercado digital. Este portfólio reúne um pouco disso, com a imagem e a narrativa sempre no centro.</p>
+        </div>
+        <div>
+          <h3>Sua ideia pode virar o próximo filme.</h3>
+          <p>Uma marca pra apresentar, uma história pra contar ou um momento pra registrar. O ponto de partida é sempre entender o que você quer comunicar e pra quem.</p>
+          <ul class="about-list">
+            <li>Conteúdo pra redes sociais e Reels</li>
+            <li>Vídeos publicitários, VSL e anúncios</li>
+            <li>Edição de aulas e infoprodutos</li>
+            <li>Documentários e vlogs</li>
+            <li>Fotografia e filmagem de festas e eventos</li>
+          </ul>
+        </div>
+      </div>
       <a class="cta wpp" target="_blank" rel="noopener">Fale no WhatsApp ↗</a>
     </div>
   </div>
