@@ -50,7 +50,7 @@ h1 em{color:var(--acc)}
 .hero2 h1{max-width:12ch;font-size:clamp(46px,7.4vw,108px)}
 .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .ctas .cta{margin:0}
-.me{position:relative;padding:0 0 clamp(60px,8vw,110px) clamp(40px,8vw,120px)}
+.me{position:relative;padding-left:clamp(40px,8vw,120px)}
 .mestack{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px #0009;background:#18181b}
 .mephoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0;transition:opacity 1.2s ease}
 .mephoto.on{opacity:1}
@@ -58,7 +58,7 @@ h1 em{color:var(--acc)}
 .me .feat{position:absolute;left:0;bottom:0;width:62%;aspect-ratio:16/10;border:4px solid var(--bg)}
 .me .feat .fp{width:50px;height:50px;font-size:15px;box-shadow:0 0 0 7px #ffd23f2e;left:auto;right:14px;top:14px;translate:none}
 .me .feat .fc b{font-size:clamp(17px,1.6vw,22px)}
-@media(max-width:860px){.me{padding:0 0 70px 0;max-width:520px}.me .feat{width:78%;left:auto;right:-4px}}
+@media(max-width:860px){.me{padding:0;max-width:520px}}
 .feat{position:relative;display:block;width:100%;border:0;padding:0;background:#18181b;border-radius:18px;overflow:hidden;aspect-ratio:16/10;text-align:left;box-shadow:0 30px 80px #0008}
 .feat img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .feat:hover img{transform:scale(1.04)}
@@ -218,7 +218,6 @@ footer a:hover{color:var(--acc)}
           <img class="mephoto" src="img/rods-filmando.jpg" alt="Rods filmando um evento com câmera no tripé" loading="lazy">
           <img class="mephoto" src="img/rods-luz.jpg" alt="Rods de olhos fechados sob um feixe de luz azul" loading="lazy">
         </div>
-        <button class="feat" id="feat" aria-label="Assistir trabalho em destaque"></button>
       </div>
     </header>
     <div class="nums">
@@ -1507,7 +1506,7 @@ document.querySelectorAll(".wpp").forEach(a => a.href = wpp);
 $("svcs").innerHTML = SERVICOS.map(s => `<a class="svc" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(s.msg)}"><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p><em>Pedir orçamento ↗</em></a>`).join("");
 function renderFeat(){
   const v = VIDEOS[DESTAQUE] || VIDEOS[0]; if (!v) return;
-  const f = $("feat"); f.dataset.v = VIDEOS.indexOf(v);
+  const f = $("feat"); if (!f){ $("nTrab").textContent = VIDEOS.length; return; } f.dataset.v = VIDEOS.indexOf(v);
   f.innerHTML = `<img src="https://i.ytimg.com/vi/${v.yt}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg'" alt=""><span class="fp">▶</span><div class="fc"><small>Em destaque · ${esc(v.cat)}</small><b>${esc(v.t)}</b></div>`;
   $("nTrab").textContent = VIDEOS.length;
 }
