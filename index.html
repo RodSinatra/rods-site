@@ -464,6 +464,48 @@ const FOTOS = [
 const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
 const PROMPTS = [
   {
+    titulo: "Agachada na plataforma do metrô",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the adult woman in the attached image and keep her face, hair, skin tone and any freckles or moles exactly the same; the reference image is the only source for her identity. Candid street-style photo on an underground metro platform, taken by a friend from chest height, slightly above her eye level, a gentle high angle, full body with her crouching in the center of the frame. She squats on the platform with knees bent and apart, torso leaning slightly forward, weight on her feet, head turned to the side. Right elbow resting on her knee, right hand raised to her chin with curved fingers lightly touching her face in a thoughtful gesture; left hand hanging relaxed in front of the knee, fingers almost touching the floor, dark nail polish. Distant, thoughtful gaze to the left of the frame, relaxed eyelids, lips slightly parted, no smile, calm and enigmatic. Wearing a loose oversized black faux-leather biker jacket with wide snap lapels, shoulder epaulettes and a metal zipper, sleeves creasing at the elbows, a white long-sleeve top with cuffs showing at the wrists, straight loose black trousers, chunky black leather lug-sole boots and a small hoop earring. Behind her, a silver stainless steel metro train with a blue stripe and lit windows passes fully motion-blurred, passengers as blurred silhouettes. Polished, slightly reflective grey granite floor, yellow tactile safety strip near the edge, turquoise tactile tiles in the lower right corner, a faded red-terracotta painted area on the floor, dark sloped ceiling with brown slats. Lighting: diffuse fluorescent platform light from above and slightly in front, soft on her face, fill bounced off the pale floor and the lit train windows, medium contrast. Shot on iPhone 15 Pro Max rear telephoto 77mm in portrait mode, sharp focus on her face and the hand near her chin, shallow depth of field with the train and background strongly blurred, telephoto compression, slightly imperfect portrait cutout around the hair. Instagram preset grade with cool desaturated tones, lifted blacks, moderate contrast, a slight green-blue tint in the shadows and natural skin tones, fine low-light sensor grain in the dark areas, soft lo-fi detail, subtle skin pores, no perfect retouching. Looks like a real iPhone photo posted on Instagram. Not CGI, not 3D, not a studio shoot, no flash, no ring light, no harsh direct light, no HDR, no oversaturated colors.`,
+    json: `{
+  "reference": "use the attached image as the only source for the woman's face, hair, skin tone and any freckles or moles",
+  "scene": "underground urban metro platform with a silver blue-striped train passing, fully motion-blurred",
+  "camera": "iPhone 15 Pro Max rear telephoto 77mm, portrait mode, taken by a friend from chest height, slightly above her eye level, gentle high angle, full body crouching in the center of the frame",
+  "pose": "squatting on the platform, knees bent and apart, torso leaning slightly forward, head turned to the side",
+  "hands": "right elbow on the knee, right hand at the chin with curved fingers touching the face, left hand hanging relaxed with fingers almost on the floor, dark nail polish",
+  "expression": "distant thoughtful gaze to the left of the frame, relaxed eyelids, lips slightly parted, no smile, calm and enigmatic",
+  "outfit": "oversized black faux-leather biker jacket with snap lapels, epaulettes and metal zipper, white long-sleeve top with visible cuffs, loose straight black trousers, chunky black lug-sole leather boots, small hoop earring",
+  "background": "blurred silver train with blue stripe and lit windows, passenger silhouettes, polished grey granite floor, yellow tactile safety strip, turquoise tactile tiles lower right, faded terracotta floor marking, dark sloped ceiling with brown slats",
+  "lighting": "diffuse fluorescent light from above and slightly in front, soft on the face, bounce from the floor and the train windows, medium contrast",
+  "look": "Instagram preset, cool desaturated tones, lifted blacks, moderate contrast, green-blue shadows, natural skin, fine low-light grain, soft lo-fi detail",
+  "mood": "urban, cinematic, contemplative pause in the middle of city motion, cool and confident",
+  "negative": "CGI, 3D render, studio lighting, ring light, softbox, flash, harsh direct light, HDR, oversaturated colors, plastic skin, heavy retouching, different face"
+}`
+  },
+  {
+    titulo: "Melancolia na janela do trem",
+    categoria: "Lifestyle",
+    genero: "Unissex",
+    drive: "",
+    prompt: `Use the person in the attached image and keep their face, hair, eyes, skin tone and body exactly the same; the reference image is the only source for their identity. Candid night photo inside a train car, taken by a friend sitting across and slightly diagonal, at eye level or a little above, half body from head to bent knees. They sit on the seat by the window with their knees pulled up to their chest, body leaning toward the window, head and right shoulder resting sideways on the glass. Arms wrapped around their knees, left hand resting on the right forearm, right hand hanging relaxed, a thin silver ring. Distant gaze off to the left of the frame, heavy relaxed eyelids, lips closed and relaxed, no smile, serene melancholy and tiredness. Wearing an oversized shiny black leather jacket with lapel collar and dropped shoulders, natural creases, a white cuff showing under the sleeve, black pants and a small hoop earring. Background: the dark window glass reflects their face, orange city lights in bokeh outside, cream-beige train walls, blurred rectangular fluorescent ceiling lights, a light plastic window ledge, grey metal grab bar strongly out of focus in the foreground, greenish and bluish reflections in the dark areas. Lighting: cold overhead fluorescent light from above and slightly front-left, soft light on the face and highlights on the leather, light bounced off the pale walls and window, small warm touches from the city lights, medium-high contrast. Shot on iPhone 15 Pro Max rear telephoto 77mm in portrait mode, focus on the face and eyes, soft portrait blur with imperfect edges. Moody film-style grade with teal-green shadows, warm skin tones, soft highlights, slight desaturation and faded blacks, light to moderate low-light sensor grain, moderate lo-fi sharpness, real skin with visible pores and a natural shine. Looks like a real iPhone photo posted on Instagram. Not CGI, not 3D, not a studio shoot, no flash, no ring light, no rim light.`,
+    json: `{
+  "reference": "use the attached image as the only source for the person's face, hair, eyes, skin tone and body",
+  "scene": "inside a train car at night, seated on the bench by the window, quiet ride home",
+  "camera": "iPhone 15 Pro Max rear telephoto 77mm, portrait mode, taken by a friend sitting across and slightly diagonal, eye level or slightly above, half body from head to bent knees",
+  "pose": "knees pulled up to the chest, body leaning toward the window, head and right shoulder resting sideways on the glass",
+  "hands": "arms wrapped around the knees, left hand on the right forearm, right hand hanging relaxed, thin silver ring",
+  "expression": "distant gaze to the left of the frame, heavy eyelids, closed relaxed lips, no smile, serene melancholy",
+  "outfit": "oversized shiny black leather jacket with lapel collar and dropped shoulders, white cuff under the sleeve, black pants, small hoop earring",
+  "background": "dark window reflecting the face, orange city lights in bokeh outside, cream-beige walls, blurred fluorescent ceiling lights, light plastic window ledge, grey metal bar blurred in the foreground",
+  "lighting": "cold overhead fluorescent light from above and front-left, soft light on the face, highlights on the leather, bounce from pale walls, warm touches from the city lights, medium-high contrast",
+  "look": "moody film grade, teal-green shadows, warm skin, soft highlights, slight desaturation, faded blacks, low-light grain, moderate lo-fi sharpness, natural skin texture",
+  "mood": "melancholic, introspective, lonely late-night ride home, main character energy",
+  "negative": "CGI, 3D render, studio lighting, ring light, softbox, flash, rim light, flat lighting, plastic skin, heavy retouching, different face"
+}`
+  },
+  {
     titulo: "Risada no metrô à noite, jaqueta de couro",
     categoria: "Lifestyle",
     genero: "Feminino",
