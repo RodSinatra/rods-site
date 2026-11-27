@@ -59,7 +59,7 @@ h1 em{color:var(--acc)}
 .feat .fc{position:absolute;left:20px;right:20px;bottom:18px;z-index:2}
 .feat .fc small{display:block;font-size:11px;letter-spacing:.2em;color:var(--acc);text-transform:uppercase;margin-bottom:4px}
 .feat .fc b{font:400 clamp(22px,2.4vw,30px)/1.1 "Instrument Serif",serif}
-.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .nums div{padding:22px 18px;border-left:1px solid var(--line)}
 .nums div:first-child{border-left:0;padding-left:0}
 .nums b{display:block;font:400 clamp(34px,4vw,52px)/1 "Instrument Serif",serif;color:var(--acc)}
@@ -74,7 +74,7 @@ h1 em{color:var(--acc)}
 .endcta h2{font:400 clamp(34px,5vw,64px)/1 "Instrument Serif",serif;max-width:14ch}
 .endcta .cta{margin:0;background:#111;color:#fff}
 .endcta .cta:hover{background:#000}
-@media(max-width:860px){.hero2{grid-template-columns:1fr}.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.nums div:nth-child(3){border-left:0;padding-left:0}.nums div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:860px){.hero2{grid-template-columns:1fr}}@media(max-width:560px){.nums{grid-template-columns:1fr}.nums div{border-left:0;padding-left:0;border-top:1px solid var(--line)}.nums div:first-child{border-top:0}}
 
 /* trabalhos */
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:30px 0 18px}
@@ -209,7 +209,6 @@ footer a:hover{color:var(--acc)}
       <div><b>15+</b><span>anos editando vídeo</span></div>
       <div><b>Milhares</b><span>de aulas de infoprodutos editadas</span></div>
       <div><b id="nTrab">24</b><span>trabalhos no portfólio</span></div>
-      <div><b>3</b><span>idiomas: português, espanhol e inglês</span></div>
     </div>
     <div class="svcs" id="svcs"></div>
     <div class="sec-h"><h2>TRABALHOS SELECIONADOS</h2><span class="hint" id="stat"></span></div>
@@ -319,7 +318,7 @@ const VIDEOS = [
   {cat:"Documentários e Vlogs", t:"Turnê de Carnaval 2024", yt:"1SccVZ9Kb6A", d:"Direção, filmagem e edição."},
   {cat:"Reels e Conteúdos", t:"Reels e Conteúdos 01", yt:"t-NrXZID2LA"},
   {cat:"Reels e Conteúdos", t:"Reels e Conteúdos 02", yt:"hPD1zB1GbdI"},
-  {cat:"VSL e ADS", t:"VSL e ADS 01", yt:"862mix7s17Q"},
+  {cat:"VSL e ADS", t:"Anúncio Cardoso Mundo", yt:"862mix7s17Q"},
   {cat:"VSL e ADS", t:"VSL e ADS 02", yt:"6Qc5zT1ovCg"},
   {cat:"VSL e ADS", t:"VSL e ADS 03", yt:"LGWS8dhdCbc"},
   {cat:"VSL e ADS", t:"VSL e ADS 04", yt:"KcH1uOW0djI"},
@@ -524,7 +523,7 @@ const PROMPTS = [
     titulo: "Selfie de academia com fone, celular rosa",
     categoria: "Fitness",
     genero: "Feminino",
-    drive: "",
+    drive: "1ZMQCTjAtc1nvD6p1k9hTwIUz3t-28tjJ",
     prompt: `Use the adult woman in the attached image and keep her hair, skin tone, body and any tattoos exactly the same; the reference image is the only source for her identity. Casual gym mirror selfie like a fitness Instagram story, shot on an iPhone 15 Pro Max rear 24mm wide lens, phone held at face height slightly from above, almost full body from head to shins. Her face is almost completely hidden behind a light pink iPhone Pro with three rear cameras held up in front of it in the mirror, only part of the side of her face and jaw visible; the face must stay hidden behind the phone. She stands in a slight three-quarter profile, hip pushed to the side, one leg slightly forward and bent, weight on the back leg, relaxed confident posture; one hand wraps around the side of the phone, the other arm hangs loose by her side with relaxed fingers, short nude nail polish. Hair loose, falling behind her shoulders and over one side. Wearing white over-ear headphones on her head, a fitted black matte compression cropped racerback tank with a high neck ending just above the navel, showing a thin strip of stomach, black high-waisted seamless compression leggings, white ankle socks, a delicate thin gold chain necklace with a small pendant; the small logos on the top and leggings are tiny and unreadable. Slight gym glow on arms and shoulders, natural skin texture with subtle pores, no plastic look. Gym behind her: large indoor gym with a wall mirror, light laminate wood floor with light reflections, large rectangular windows in the back letting in bright natural daylight, dark grey-green walls, ceiling panels with recessed fluorescent lights, dark weight machines slightly blurred, a support bar and the mirror base visible on the left, small frames on the back wall, the gym fairly empty. Lighting: diffuse daylight from the windows mixed with even fluorescent ceiling light on her body and the floor, medium contrast. Focus on her body in the reflection, background slightly soft, light sensor grain, moderate lo-fi sharpness, slight noise in dark areas, small smudges and imperfections on the mirror, slight detail loss in the bright windows, slight wide-angle distortion at the edges, standard iPhone processing with slightly warm tones and soft contrast. Looks like a real iPhone photo posted on Instagram stories. Not CGI, not 3D, not a studio shoot, no ring light, no softbox, no flash, no dramatic cinematic light, no text overlays.`,
     json: `{
   "reference": "use the attached image as the only source for the woman's hair, skin tone, body and any tattoos; the face stays hidden",
