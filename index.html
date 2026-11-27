@@ -520,6 +520,28 @@ const FOTOS = [
 const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
 const PROMPTS = [
   {
+    titulo: "Selfie com taça de vinho em casa",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the adult woman in the attached image and keep her face, hair, skin tone and any tattoos exactly the same; the reference image is the only source for her identity. Casual night selfie at home in Instagram story style, shot on the iPhone 15 Pro Max front camera (about 24mm wide), arm extended with her left arm holding the phone and leaving the frame at the lower left, slightly above eye level, close-up to half body showing face, neck and chest. Head tilted slightly to the side and back as she takes a sip of red wine: her right hand holds a clear round crystal wine glass by the stem near her face, fingers partly visible at the right edge, lips in a small pout touching the rim, the glass in the foreground slightly out of focus and partly covering and distorting one of her eyes through the glass. Looking straight at the camera with relaxed half-closed eyelids, calm pleasure, easy charm and a playful hint of seduction. Very long loose wavy hair with a healthy shine falling over one shoulder, a few strands on her face, light natural makeup with a little highlighter and nude-pink lips, short nude nails. Wearing a plain black fitted camisole with thin straps and a straight neckline, fine ribbed stretch knit, no print, a thin gold chain necklace with a small white pearly heart pendant. The glass is half full of dark burgundy red wine. Background: apartment living and dining room at night, two matte black cone pendant lamps hanging on thin cords, a medium-brown wood-clad ceiling strip, white lowered plaster ceiling with recessed cool spotlights, a sheer white voile curtain on the left, a brown wooden door at the back, plain white walls, a small blown light flare in the upper right corner. Lighting: mixed home lighting at night, soft diffuse light from the ceiling spots and lamps from the front and above, slightly warm on her face and chest, bounce from the white walls and ceiling softening shadows under the chin and neck, medium contrast. Main focus on her face and eyes, background slightly soft but recognizable. Front-camera wide-angle distortion with the near shoulder and arm slightly enlarged and ceiling lines slightly curved at the edges. Light sensor noise in the dark hair and top, slight color noise in the shadows, small blown highlights on the ceiling lights, light story compression, soft lo-fi front-camera detail, real skin with subtle pores and a natural shine on forehead, nose and chest, slight flush, iPhone Smart HDR, natural warm colors, no heavy filters or professional retouching. Looks like a real iPhone front-camera selfie posted on Instagram stories. Not CGI, not 3D, not a studio shoot, no ring light or ring-light catchlights, no softbox, no flash, no dramatic cinematic or beauty-shot lighting.`,
+    json: `{
+  "reference": "use the attached image as the only source for the woman's face, hair, skin tone and any tattoos",
+  "scene": "apartment living room at night, relaxing with a glass of red wine, Instagram story",
+  "camera": "iPhone 15 Pro Max front camera about 24mm, arm extended with the left arm leaving the frame lower left, slightly above eye level, close-up to half body",
+  "pose": "chest toward the camera, head tilted slightly to the side and back while sipping",
+  "hands": "right hand holding a round crystal wine glass by the stem near the face, glass partly covering and distorting one eye, short nude nails",
+  "expression": "looking straight at the camera, relaxed half-closed eyelids, lips in a pout on the rim, calm pleasure, playful charm",
+  "outfit": "plain black fitted thin-strap camisole in fine ribbed knit, thin gold chain with a small white pearly heart pendant",
+  "props": "clear crystal wine glass half full of dark burgundy red wine, slightly out of focus in the foreground",
+  "background": "two matte black cone pendant lamps, brown wood-clad ceiling strip, white plaster ceiling with recessed spots, sheer white curtain on the left, brown wooden door, white walls, small light flare upper right",
+  "lighting": "soft diffuse warm-ish ceiling light from front and above, bounce from white walls and ceiling, medium contrast",
+  "look": "front-camera wide-angle distortion, light sensor noise, small blown highlights, story compression, soft lo-fi detail, real skin with natural shine, Smart HDR, natural warm colors",
+  "mood": "cozy intimate night at home, relaxed and naturally sensual",
+  "negative": "CGI, 3D render, studio shoot, ring light, ring-light catchlights, softbox, flash, dramatic cinematic light, beauty-shot lighting, plastic skin, heavy retouching, different face"
+}`
+  },
+  {
     titulo: "Olhar por cima do ombro na plataforma",
     categoria: "Lifestyle",
     genero: "Feminino",
