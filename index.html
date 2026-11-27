@@ -51,7 +51,10 @@ h1 em{color:var(--acc)}
 .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
 .ctas .cta{margin:0}
 .me{position:relative;padding:0 0 clamp(60px,8vw,110px) clamp(40px,8vw,120px)}
-.mephoto{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;border-radius:22px;box-shadow:0 30px 80px #0009}
+.mestack{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px #0009;background:#18181b}
+.mephoto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0;transition:opacity 1.2s ease}
+.mephoto.on{opacity:1}
+@media(prefers-reduced-motion:reduce){.mephoto{transition:none}}
 .me .feat{position:absolute;left:0;bottom:0;width:62%;aspect-ratio:16/10;border:4px solid var(--bg)}
 .me .feat .fp{width:50px;height:50px;font-size:15px;box-shadow:0 0 0 7px #ffd23f2e;left:auto;right:14px;top:14px;translate:none}
 .me .feat .fc b{font-size:clamp(17px,1.6vw,22px)}
@@ -210,7 +213,11 @@ footer a:hover{color:var(--acc)}
         </div>
       </div>
       <div class="me">
-        <img class="mephoto" src="img/rods-sobre.jpg" alt="Rodrigo Fernandez, o Rods">
+        <div class="mestack">
+          <img class="mephoto on" src="img/rods-home.jpg" alt="Rodrigo Fernandez, o Rods, de capuz e fone de ouvido com luz azul e vermelha">
+          <img class="mephoto" src="img/rods-filmando.jpg" alt="Rods filmando um evento com câmera no tripé" loading="lazy">
+          <img class="mephoto" src="img/rods-luz.jpg" alt="Rods de olhos fechados sob um feixe de luz azul" loading="lazy">
+        </div>
         <button class="feat" id="feat" aria-label="Assistir trabalho em destaque"></button>
       </div>
     </header>
@@ -1505,6 +1512,9 @@ function renderFeat(){
   $("nTrab").textContent = VIDEOS.length;
 }
 renderFeat();
+{ const fotos=[...document.querySelectorAll(".mephoto")]; let k=0;
+  if (fotos.length>1 && !matchMedia("(prefers-reduced-motion: reduce)").matches)
+    setInterval(()=>{ fotos[k].classList.remove("on"); k=(k+1)%fotos.length; fotos[k].classList.add("on"); }, 5000); }
 document.querySelectorAll(".insta").forEach(a => a.href = `https://instagram.com/${INSTAGRAM}`);
 $("yr").textContent = new Date().getFullYear();
 
