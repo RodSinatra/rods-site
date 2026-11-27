@@ -6,7 +6,9 @@
 <title>RODS | Filmes</title>
 <meta name="description" content="Rodrigo Fernandez. Filmes, edição e conteúdo. Publicidade, documentários, festas e vídeos para redes sociais.">
 <meta property="og:title" content="RODS | Rodrigo Fernandez Audiovisual">
-<meta property="og:image" content="https://cdn.myportfolio.com/3b984019-74b9-40b8-8fed-2cb87dadd330/b03f46ef-1a27-4693-9b12-5a37af1a26a2_rwc_0x0x1916x1080x1916.jpg?h=a2cab7481f0f812bfff2d8b2f2e067d6">
+<meta property="og:image" content="https://rodsinatra.github.io/rods-site/img/rods-sobre.jpg">
+<meta property="og:description" content="Filmes, edição e conteúdo. Um olhar para cada história.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='42' font-style='italic' text-anchor='middle' fill='%23ffd23f'%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 <style>
@@ -42,6 +44,37 @@ h1 em{color:var(--acc)}
 .cta.ghost{background:transparent;color:var(--ink);border:1px solid #3a3a3f;margin-left:10px}
 .cta.ghost:hover{border-color:var(--acc);color:var(--acc);background:transparent}
 .stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:18px 0;color:var(--mute);font-size:14px;margin-top:clamp(48px,7vw,90px)}
+
+/* home nova */
+.hero2{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,4vw,60px);align-items:center;padding:clamp(48px,8vw,110px) 0 clamp(36px,5vw,60px)}
+.hero2 h1{max-width:12ch;font-size:clamp(46px,7.4vw,108px)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.ctas .cta{margin:0}
+.feat{position:relative;display:block;width:100%;border:0;padding:0;background:#18181b;border-radius:18px;overflow:hidden;aspect-ratio:16/10;text-align:left;box-shadow:0 30px 80px #0008}
+.feat img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.feat:hover img{transform:scale(1.04)}
+.feat::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,#000c)}
+.feat .fp{position:absolute;left:50%;top:50%;translate:-50% -50%;width:78px;height:78px;border-radius:50%;background:var(--acc);color:#111;display:grid;place-items:center;font-size:22px;z-index:2;transition:transform .25s;box-shadow:0 0 0 10px #ffd23f2e}
+.feat:hover .fp{transform:scale(1.08)}
+.feat .fc{position:absolute;left:20px;right:20px;bottom:18px;z-index:2}
+.feat .fc small{display:block;font-size:11px;letter-spacing:.2em;color:var(--acc);text-transform:uppercase;margin-bottom:4px}
+.feat .fc b{font:400 clamp(22px,2.4vw,30px)/1.1 "Instrument Serif",serif}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.nums div{padding:22px 18px;border-left:1px solid var(--line)}
+.nums div:first-child{border-left:0;padding-left:0}
+.nums b{display:block;font:400 clamp(34px,4vw,52px)/1 "Instrument Serif",serif;color:var(--acc)}
+.nums span{font-size:13.5px;color:var(--mute)}
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px;margin:clamp(40px,6vw,70px) 0 10px}
+.svc{display:flex;flex-direction:column;gap:8px;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card);transition:.2s;min-height:170px}
+.svc:hover{border-color:var(--acc);transform:translateY(-3px)}
+.svc h3{font:400 26px/1.1 "Instrument Serif",serif}
+.svc p{color:var(--mute);font-size:14px;flex:1}
+.svc em{font-style:normal;font-size:13px;font-weight:600;color:var(--acc)}
+.endcta{margin:10px 0 90px;padding:clamp(36px,6vw,70px);border-radius:24px;background:var(--acc);color:#111;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.endcta h2{font:400 clamp(34px,5vw,64px)/1 "Instrument Serif",serif;max-width:14ch}
+.endcta .cta{margin:0;background:#111;color:#fff}
+.endcta .cta:hover{background:#000}
+@media(max-width:860px){.hero2{grid-template-columns:1fr}.nums{grid-template-columns:repeat(2,minmax(0,1fr))}.nums div:nth-child(3){border-left:0;padding-left:0}.nums div:nth-child(n+3){border-top:1px solid var(--line)}}
 
 /* trabalhos */
 .sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:30px 0 18px}
@@ -153,24 +186,39 @@ footer a:hover{color:var(--acc)}
     <a href="#videos" data-p="videos">Vídeos</a>
     <a href="#fotografias" data-p="fotografias">Fotografias</a>
     <a href="#prompts" data-p="prompts" class="pr">Prompts</a>
-    <a href="#sobre" data-p="sobre">Sobre o Rods ↗</a>
+    <a href="#sobre" data-p="sobre">Sobre o Rods</a>
   </div>
 </div></nav>
 
 <!-- ============ VÍDEOS ============ -->
 <section class="page" id="p-videos">
   <div class="wrap">
-    <header class="hero">
-      <div class="kicker">Rodrigo Fernandez / Audiovisual</div>
-      <h1>Histórias que merecem <em>ser vistas.</em></h1>
-      <p class="lead">Filmes, edição e conteúdo. Um olhar para cada história.</p>
-      <a class="cta wpp" target="_blank" rel="noopener">Fale no WhatsApp ↗</a>
-      <a class="cta ghost insta" target="_blank" rel="noopener">Siga no Instagram ↗</a>
-      <div class="stats"><span id="stat"></span><span>Explore. Assista. Vamos conversar.</span></div>
+    <header class="hero2">
+      <div>
+        <div class="kicker">Rodrigo Fernandez / Audiovisual</div>
+        <h1>Histórias que merecem <em>ser vistas.</em></h1>
+        <p class="lead">Filmes, edição e conteúdo. Um olhar para cada história.</p>
+        <div class="ctas">
+          <a class="cta wpp" target="_blank" rel="noopener">Fale no WhatsApp ↗</a>
+          <a class="cta ghost insta" target="_blank" rel="noopener">Siga no Instagram ↗</a>
+        </div>
+      </div>
+      <button class="feat" id="feat" aria-label="Assistir trabalho em destaque"></button>
     </header>
-    <div class="sec-h"><h2>TRABALHOS SELECIONADOS</h2></div>
+    <div class="nums">
+      <div><b>15+</b><span>anos editando vídeo</span></div>
+      <div><b>Milhares</b><span>de aulas de infoprodutos editadas</span></div>
+      <div><b id="nTrab">24</b><span>trabalhos no portfólio</span></div>
+      <div><b>3</b><span>idiomas: português, espanhol e inglês</span></div>
+    </div>
+    <div class="svcs" id="svcs"></div>
+    <div class="sec-h"><h2>TRABALHOS SELECIONADOS</h2><span class="hint" id="stat"></span></div>
     <div class="filters" id="vf"></div>
     <div class="works" id="works"></div>
+    <div class="endcta">
+      <h2>Bora contar a sua história?</h2>
+      <a class="cta wpp" target="_blank" rel="noopener">Pedir orçamento no WhatsApp ↗</a>
+    </div>
   </div>
 </section>
 
@@ -246,6 +294,15 @@ footer a:hover{color:var(--acc)}
    CONTEÚDO DO SITE. É só mexer aqui.
    ========================================================= */
 const WHATSAPP = "5512997538060";
+/* DESTAQUE da home: posição do vídeo na lista VIDEOS (0 = o primeiro). Troca pelo teu showreel quando tiver. */
+const DESTAQUE = 0;
+/* SERVIÇOS da home: cada card abre o WhatsApp com a mensagem pronta */
+const SERVICOS = [
+  {t:"Reels e conteúdo", d:"Vídeos curtos que prendem nos primeiros segundos, pra marcas e criadores.", msg:"Oi Rods! Quero orçar edição de Reels e conteúdo pra redes."},
+  {t:"VSL e anúncios", d:"Edição de resposta direta: VSLs, criativos e anúncios que vendem.", msg:"Oi Rods! Quero orçar uma VSL ou anúncios."},
+  {t:"Aulas e infoprodutos", d:"Edição de cursos e aulas em volume, com padrão e prazo.", msg:"Oi Rods! Quero orçar edição de aulas de um infoproduto."},
+  {t:"Documentários e eventos", d:"Filmagem, foto e edição de festas, shows, viagens e histórias.", msg:"Oi Rods! Quero orçar filmagem ou edição de um evento ou documentário."}
+];
 const MSG_WHATS = "Olá, Rods! Vi seu portfólio e gostaria de conversar sobre um vídeo.";
 const INSTAGRAM = "rods.raw"; /* só o @, sem o arroba */
 const LINK_FLOW = "https://labs.google/fx/tools/flow";
@@ -1257,6 +1314,14 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const wpp = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MSG_WHATS)}`;
 document.querySelectorAll(".wpp").forEach(a => a.href = wpp);
+$("svcs").innerHTML = SERVICOS.map(s => `<a class="svc" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(s.msg)}"><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p><em>Pedir orçamento ↗</em></a>`).join("");
+function renderFeat(){
+  const v = VIDEOS[DESTAQUE] || VIDEOS[0]; if (!v) return;
+  const f = $("feat"); f.dataset.v = VIDEOS.indexOf(v);
+  f.innerHTML = `<img src="https://i.ytimg.com/vi/${v.yt}/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${v.yt}/hqdefault.jpg'" alt=""><span class="fp">▶</span><div class="fc"><small>Em destaque · ${esc(v.cat)}</small><b>${esc(v.t)}</b></div>`;
+  $("nTrab").textContent = VIDEOS.length;
+}
+renderFeat();
 document.querySelectorAll(".insta").forEach(a => a.href = `https://instagram.com/${INSTAGRAM}`);
 $("yr").textContent = new Date().getFullYear();
 
