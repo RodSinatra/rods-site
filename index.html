@@ -520,6 +520,27 @@ const FOTOS = [
 const CATEGORIAS_NOVAS = ["Lifestyle", "Editorial", "Fitness"];
 const PROMPTS = [
   {
+    titulo: "Selfie no carro, blusa canelada com zíper",
+    categoria: "Lifestyle",
+    genero: "Feminino",
+    drive: "",
+    prompt: `Use the adult woman in the attached image and keep her face, hair, skin tone and any moles or piercings exactly the same; the reference image is the only source for her identity. Casual front-camera selfie inside a parked car during the day, like an Instagram story or UGC post, shot on the iPhone 15 Pro Max front camera (24mm wide), arm extended with her right arm leaving the frame on the left, slightly above eye level, medium close-up from head to waist, phone not visible. She sits in the front seat of an SUV, back against the black-graphite leather seat with visible white stitching, torso slightly turned toward the camera, head gently tilted, seatbelt buckled diagonally across her body, left arm relaxed by her side. Direct look into the lens with slightly narrowed, confident and magnetic eyes, lips closed in a subtle half smile raised on one side, calm self-confidence and discreet charm. Light to medium makeup: satin even skin, rosy blush, thin black winged liner, mascara, filled brows, creamy pink nude lipstick. Hair loose and falling in front of both shoulders. Wearing a fitted charcoal almost-black fine ribbed long-sleeve top with a round neck and a small dark metal front zipper partly open into a V, no prints or text, dark high-waisted bottoms barely visible, a small silver stud earring. Background: light grey car headliner, black leather rear headrest, door pillar and rubber seal on the left, a side rear window showing the bright exterior with a blurred person in a white t-shirt. Lighting: soft diffuse daylight through the windshield and side window, even on her face from the front, bounce from the light headliner softening shadows under the eyes and chin, medium contrast. Focus on her face and eyes, background slightly blurred, the window slightly blown out. Satin skin with subtle pores on nose and cheeks, natural rosy flush, light shine on forehead and nose bridge, light phone smoothing without losing texture. Light sensor grain in the dark seat and clothing, moderate lo-fi sharpness, subtle JPEG compression, slight front-camera wide-angle distortion with the shoulder and arm near the lens slightly enlarged, standard iPhone processing with slightly warm skin tones, soft contrast and a subtle Instagram filter. Looks like a real iPhone photo posted on Instagram stories. Not CGI, not 3D, not a studio shoot, no ring light or circular catchlights, no flash, no harsh shadows, no cinematic backlight.`,
+    json: `{
+  "reference": "use the attached image as the only source for the woman's face, hair, skin tone and any moles or piercings",
+  "scene": "front seat of a parked SUV during the day, quick selfie before heading out, outfit of the day",
+  "camera": "iPhone 15 Pro Max front camera 24mm wide, arm extended out of frame on the left, slightly above eye level, medium close-up head to waist, phone not visible",
+  "pose": "seated, back against the leather seat, torso slightly turned to the camera, head gently tilted, seatbelt across the body, left arm relaxed",
+  "expression": "direct look into the lens, slightly narrowed confident eyes, closed-lip half smile raised on one side",
+  "makeup": "satin skin, rosy blush, thin black winged liner, mascara, filled brows, creamy pink nude lipstick",
+  "outfit": "fitted charcoal fine ribbed long-sleeve round-neck top with small dark metal zipper partly open into a V, dark high-waisted bottoms, small silver stud earring",
+  "background": "black-graphite leather seats with white stitching, light grey headliner, black rear headrest, door pillar on the left, bright side window with a blurred person in a white t-shirt",
+  "lighting": "soft diffuse daylight through windshield and side window, even frontal light, bounce from the headliner, medium contrast",
+  "look": "focus on the eyes, slightly blurred background, slightly blown-out window, satin skin with pores, light grain, subtle JPEG compression, front-camera distortion, warm skin tones, subtle Instagram filter",
+  "mood": "casual, confident, everyday lifestyle influencer",
+  "negative": "CGI, 3D render, studio shoot, ring light, circular catchlights, flash, harsh shadows, cinematic backlight, plastic skin, heavy retouching, different face"
+}`
+  },
+  {
     titulo: "Selfie de academia com fone, celular rosa",
     categoria: "Fitness",
     genero: "Feminino",
